@@ -1,0 +1,327 @@
+<template>
+    <div>
+        <div class="projects-container">
+        <div class="projects-line"></div>
+        <div class="projects">
+                <h1>PROJECTS</h1>
+        </div>
+    </div>
+
+    <div class="projects-pictures">
+    <div class="row">
+        <div class="Fortis-Green">
+            <img src="../assets/images/image06.jpg" alt="Fortis Green">
+            <p> Fortis Green </p>
+        </div>
+        <div class="Atrium-Gate-House">
+            <img src="../assets/images/image07.jpg" alt="Atrium House, Gate House, Highgate">
+            <p> Atrium House, Gate House, Highgate </p>
+        </div>
+        <div class="Darwen-Compton-Avenue">
+            <img src="../assets/images/image16.jpg" alt="Darwen, Compton Avenue">
+            <p> Darwen, Compton Avenue </p>
+        </div>
+    </div>
+    <div class="row-two">
+        <div class="Prince-Albert-Road">
+            <img src="../assets/images/image21.jpg" alt="Prince Albert Road, London">
+            <p> Prince Albert Road, London </p>
+        </div>
+        <div class="Oakhill-Avenue">
+            <img src="../assets/images/image20.jpg" alt="Oakhill Avenue, Highgate">
+            <p> Oakhill Avenue, Highgate </p>
+        </div>
+    </div>
+    <div class="row-three">
+        <div class="Ravenscroft-Avenue">
+            <img src="../assets/images/image23.jpg" alt="Ravenscroft Avenue, Golders Green">
+            <p> Ravenscroft Avenue, Golders Green </p>
+        </div>
+        <div class="Bishops-House">
+            <img src="../assets/images/Bishop's House - after_resize.jpg" alt="Bishop’s House, East Finchley">
+            <p> Bishop’s House, East Finchley </p>
+        </div>
+        <div class="Stapleton-Hall-Road">
+            <img src="../assets/images/83 Stepleton Hall Road - after_resize.jpg" alt="Stapleton Hall Road, London ">
+            <p> Stapleton Hall Road, London  </p>
+        </div>
+        </div>
+    <div class="row-four">
+        <div class="The-Avenue">
+            <img src="../assets/images/9 The Avenue_resize.jpg" alt="The Avenue, London">
+            <p> The Avenue, London </p>
+        </div>
+        <div class="Hampstead-Way">
+            <img src="../assets/images/17 Hampstead Way_resize.jpg" alt="Hampstead Way, London">
+            <p> Hampstead Way, London </p>
+        </div>
+    </div>
+    <div class="row-five"> 
+        <div class="Hungerford-Road">
+            <img src="../assets/images/1-3 Hungerford Road (2).jpg" alt="Hungerford Road, Islington">
+            <p> Hungerford Road, Islington </p>
+        </div>
+        <div class="Hillview-Road">
+            <img src="../assets/images/Hillview Road_resize.jpg" alt="Hillview Road, London">
+            <p> Hillview Road, London </p>
+        </div>
+    </div>
+     </div>
+
+    <div class="text-container">
+        <div class="domestic-projects">
+            <h2>Smaller scale domestic projects</h2>
+        </div>
+        <div class="line"></div>
+        <div class="text">
+            <p>Over the years AD Designs has helped numerous clients to 
+    secure relevant permissions (Planning Permissions, Permitted 
+    Development Certificates, Freeholder Licences etc.) and to 
+    execute alterations, extensions and improvements to their 
+    properties. These projects included loft and garage 
+    conversions, remodelling, extensions, outbuildings etc. We also 
+    assisted many clients in refurbishing their properties. The 
+    services included specifications of works, working drawings 
+    and interior design detailing. Among others, these projects 
+    included Merton House in Highgate, Hendale Avenue in Hendon, 
+    Woodstock Avenue in Golders Green, a number of Grade II 
+    listed flats in Cadogan Gardens in Knightsbridge, Portland Road 
+    and Holland Park Avenue in Holland Park, Fortress Avenue in 
+    Kentish Town, Arlington Road in Camden Town etc.   </p>
+        </div>
+    </div>
+    </div>
+    
+</template>
+
+<script>
+</script>
+
+<style scoped>
+.projects-container {
+    display: flex; 
+    align-items: center; 
+    height: 100px;
+}
+
+.projects-line {
+    flex: none; 
+    background-color: black; 
+    height: 5px; 
+    width: 100px; 
+}
+.projects {
+    font-size: 48px; 
+    font-weight: bold; 
+    line-height: 1; 
+    color: #000000; 
+
+}
+
+.projects-pictures {
+    display: flex;
+    flex-direction: column;
+    display: block;
+    justify-content:space-between; 
+    align-items: center; 
+    margin-top: 100px;
+    width: 85%;
+}
+.row {
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+    
+}
+.row > div {
+    flex-basis: 45%; 
+    text-align:center; 
+    
+}
+
+
+.row img {
+    display: block;
+    margin: 0 auto;
+    width: 150%; 
+    height: auto; 
+    max-width: 400px; 
+    display: block; 
+}
+
+
+.row p {
+    color: #333; 
+    font-size: 16px; 
+    margin-top: 8px; 
+    justify-content: left;
+}
+
+.row-two {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    margin-top: 100px; 
+    width: 75%;
+
+}
+
+
+.row-two > div {
+    flex-basis: 45%; 
+    text-align: center; 
+    
+}
+
+.row-two img {
+    display: block;
+    margin: 0 auto;
+    width: 150%; 
+    height: auto; 
+    max-width: 400px; 
+    display: block; 
+
+}
+.row-two p {
+    color: #333; 
+    font-size: 16px; 
+    margin-top: 8px; 
+    justify-content: left;
+}
+
+.row-three {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    margin-top: 100px; 
+}
+
+.row-three > div {
+    flex-basis: 45%; 
+    text-align: center; 
+    
+}
+
+.row-three img {
+    display: block;
+    margin: 0 auto;
+    width: 150%; 
+    height: auto; 
+    max-width: 400px; 
+    display: block; 
+}
+
+
+
+.row-three p {
+    color: #333; 
+    font-size: 16px; 
+    margin-top: 8px; 
+    justify-content: left;
+}
+
+.row-four {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    margin-top: 100px; 
+    width: 75%;
+
+}
+
+
+.row-four > div {
+    flex-basis: 45%; 
+    text-align: center; 
+    
+}
+
+.row-four img {
+    display: block;
+    margin: 0 auto;
+    width: 150%; 
+    height: auto; 
+    max-width: 400px; 
+    display: block; 
+}
+
+
+.row-four p {
+    color: #333; 
+    font-size: 16px;
+    margin-top: 8px;
+    justify-content: left;
+}
+
+.row-five {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width:75%;
+    margin-top: 100px; 
+  
+    
+}
+
+.row-five > div {
+    flex-basis: 85%; 
+    text-align: center;
+    
+}
+.row-five img {
+    display: block;
+    margin: 0 auto;
+    width: 150%;
+    height: auto; 
+    max-width: 400px; 
+    display: block; 
+}
+
+.row-five p {
+    color: #333; 
+    font-size: 16px; 
+    margin-top: 8px; 
+    justify-content: left;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 100px; 
+    width: 100%;
+}
+
+.domestic-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%; 
+    height: 100px;
+}
+.domestic-projects h2 {
+    font-size: 40px; 
+    font-weight: bold; 
+    line-height: 1; 
+    color: #000000; 
+}
+
+.line {
+    background-color: black; 
+    height: 5px; 
+    width: 800px; 
+}
+
+.text {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 50%; 
+    margin-top: 50px; 
+    font-size: 20px; 
+    color: #333; 
+
+}
+
+
+
+</style>
