@@ -65,6 +65,10 @@
             <img src="../assets/images/Hillview Road_resize.jpg" alt="Hillview Road, London">
             <p> Hillview Road, London </p>
         </div>
+        <div class="307-309">
+            <img src="../assets/images/" alt="307-309 Finchley Road, London ">
+            <p> 307-309 Finchley Road, London  </p>
+        </div>
     </div>
      </div>
 

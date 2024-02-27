@@ -12,15 +12,16 @@
             <div class="line"></div>
             </div>
             <div class="profile-container">
+         <div class="profile-image">
+          <img src="../assets/images/face.jpg" alt="Almas Bavcic">
+        </div>
         <div class="profile-text">
         <p>Almas is a chartered architect and long-time member of the Royal Institute of British Architects. He has been practising architecture in the UK for over 30 years.</p>
         <p>Prior to setting up AD Design Concepts, Almas worked at PKS Architects LLP where he was an associate and a partner for many years.</p>
         <p>Our team includes a number of highly skilled and experienced architects and technicians who are passionate about their work. The credo of our entire team and our prime aim is to provide the best service to our clients.</p>
         <div class="line"></div>
       </div>
-      <div class="profile-image">
-        <img src="path-to-image.jpg" alt="Almas Bavcic">
-      </div>
+     
     </div>
 
     </div>
@@ -29,11 +30,7 @@
 <script></script>
 
 <style scoped>
-.people-contact-container {
-  display: flex;
-  align-items: center;
-  height: 100px;
-}
+
 
 .people-contact-line {
     flex: none;
@@ -64,4 +61,19 @@
     width: 70%;
     background-color: black;
   }
+  .profile-container {
+    position: relative;
+  }
+  
+  .profile-image {
+     display: flex;
+    align-items: flex-start; 
+    max-width: 500px; 
+    float: right;
+  
+}
+.profile-image img {
+    width: 100%;
+}
+
 </style>
