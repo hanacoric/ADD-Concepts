@@ -1,27 +1,37 @@
 <template>  
-<div>
-    
+
+<section class="aboutus-root">
     <div class="aboutus-container">
-    <div class="aboutus-line"></div>
-    <div class="aboutus">
+        <div class="aboutus-line"></div>
+        <div class="aboutus">
             <h1>ABOUT US</h1>
+        </div>
     </div>
-</div>
+
 
     <div class="right-text">
-        <h3>AD Design Concepts is an architectural practice established in 2010 and based in NW London.</h3>
+        <h3>AD Design Concepts is an architectural practice established in 2010 and based in NW London</h3>
     </div>
     <div>
         <div class="left-text">
             <p>Over the years AD Design Concepts have successfully completed a broad range of projects, including: domestic extensions and loft conversions, new build houses, large new build block of flats and office refurbishments.</p>
         </div>
-        <div class="left-line"></div>
+        
     </div>
 
     <div class="image-container">
+        <div class="image-container-top">
+            <div class="line-top"></div>
+        </div>
+
+        <div class="image-container-bottom">
         <img src="../assets/images/image06.jpg" alt="Aboutus-image">
+        </div>
+
+        <div class="bottom-line-container">
+        <div class="line-bottom"></div>
+        </div>
     </div>
-    <div class="line-container"></div>
     <div class="right-text-below">
         <p>The majority of the projects that we have been involved with are based in Greater London, but we work across England and abroad. 
     We provide a full range of architectural services and can take projects from inception to completion. Our particular area of expertise is planning advice and obtaining planning permissions. Over the years we have helped many of our clients to realize their aspirations, whether in creating their dream homes or maximising the value of their sites / properties.</p>
@@ -29,8 +39,7 @@
     <div class="left-text-below">
         <p>We offer creative solutions at feasibility and design stages and technical expertise in production of tender packages and construction drawings.  We work closely with Local Planning Authorities, Building Control and other regulatory bodies to obtain the necessary permission. When required we act as Contract Administrator and / or clients’ agent during the construction process.  </p>
     </div>
-</div>
- 
+ </section>
 
 </template>
 
@@ -39,10 +48,23 @@
 </script>
 
 <style scoped>
+p{text-align: justify;}
+
+h3{
+   
+    direction:rtl;
+    text-align:justify;
+    
+}
+
+.aboutus-root{
+    width: 100vw;
+}
 .aboutus-container {
-    display: flex; 
-    align-items: center; 
-    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
 }
 
 .aboutus-line {
@@ -62,7 +84,6 @@
 .right-text {
     display: flex;
     float:right;
-    text-align: justify;
     height: 10%;  
     width: 100%; 
     max-width: 1000px; 
@@ -94,33 +115,55 @@
 }
 
   img {
-    position: relative;
-    display: block; /* Removes bottom margin/whitespace inherent to inline elements */
-    height: auto; 
-    float: right;
-    padding-top: 200px;
-    padding-right: 150px;
-    width:70vw;
-    
+    height: 60vh; 
+    width:50vw;
+    display: block;
+  }
+
+  .image-container {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 550px;
+  }
+
+  .image-container-top{
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .image-container-bottom{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+    .bottom-line-container{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+    }
+  .line-top{
+    background-color: black; 
+    height: 3px; 
+    width: 60%;
   }
  
-/*   .line-container::before,
-  .line-container::after {
-    flex: none; 
+  .line-bottom{
     background-color: black; 
-    height: 5px; 
-    width: 100px;
+    height: 3px; 
+    width: 40%;
   }
-
-  .line-container::before {
-    top: 100px; /* Line above */
-   /*  float: left;
-  }
-
-  .line-container::after {
-    bottom: 0; /* Line below */
-   /*  float:right;
-  } */ 
 
   .right-text-below {
     display: flex;

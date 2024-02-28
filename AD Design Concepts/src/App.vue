@@ -9,12 +9,18 @@ import Planning from './views/Planning.vue';
 
 <template>
     <div id="app">
-        <Planning />
+        <PeopleContact />
     </div>
 </template>
 
 <style scoped>
-  
+#app > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 </style>
 
 

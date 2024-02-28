@@ -65,10 +65,7 @@
             <img src="../assets/images/Hillview Road_resize.jpg" alt="Hillview Road, London">
             <p> Hillview Road, London </p>
         </div>
-        <div class="307-309">
-            <img src="../assets/images/" alt="307-309 Finchley Road, London ">
-            <p> 307-309 Finchley Road, London  </p>
-        </div>
+        
     </div>
      </div>
 
@@ -76,7 +73,11 @@
         <div class="domestic-projects">
             <h2>Smaller scale domestic projects</h2>
         </div>
+
+        <div class="line-wrapper">
         <div class="line"></div>
+        </div>
+
         <div class="text">
             <p>Over the years AD Designs has helped numerous clients to 
     secure relevant permissions (Planning Permissions, Permitted 
@@ -124,14 +125,13 @@
 
 .projects-pictures {
     display: flex;
-    flex-direction: column;
-    display: block;
-    justify-content:space-between; 
+    justify-content:center; 
     align-items: center; 
+    flex-direction: column;
     margin-top: 100px;
-    width: 85%;
 }
 .row {
+    width: 85vw;
     display: flex;
     justify-content:space-between;
     align-items: center; 
@@ -162,12 +162,11 @@
 }
 
 .row-two {
+    width: 60vw;
     display: flex;
     justify-content: space-around; 
     align-items: center; 
     margin-top: 100px; 
-    width: 75%;
-
 }
 
 
@@ -194,6 +193,7 @@
 }
 
 .row-three {
+    width: 85vw;
     display: flex;
     justify-content: space-around; 
     align-items: center;
@@ -225,11 +225,11 @@
 }
 
 .row-four {
+    width: 60vw;
     display: flex;
     justify-content: space-around;
     align-items: center; 
     margin-top: 100px; 
-    width: 75%;
 
 }
 
@@ -258,10 +258,10 @@
 }
 
 .row-five {
+    width: 60vw;
     display: flex;
     justify-content: center;
     align-items: center; 
-    width:75%;
     margin-top: 100px; 
   
     
@@ -291,17 +291,26 @@
 .text-container {
     display: flex;
     flex-direction: column; 
-    margin-top: 100px; 
+    margin-top: 150px; 
     width: 100%;
 }
 
 .domestic-projects {
     display: flex;
-    justify-content: center;
+    margin-left:200px;
     align-items: center; 
-    width: 100%; 
-    height: 100px;
+    flex-direction: row;
+    width: 98%; 
 }
+
+.line-wrapper {
+    display: flex;
+    align-items: center; 
+    flex-direction: row;
+    width: 100%; 
+    height: 60px;
+}
+
 .domestic-projects h2 {
     font-size: 40px; 
     font-weight: bold; 
@@ -311,21 +320,26 @@
 
 .line {
     background-color: black; 
-    height: 5px; 
-    width: 800px; 
+    height: 3px; 
+    width: 700px; 
 }
 
 .text {
     display: flex;
-    justify-content: left;
-    align-items: left;
-    width: 50%; 
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%; 
     margin-top: 50px; 
-    font-size: 20px; 
-    color: #333; 
-
+    margin-left: 200px;
 }
 
+.text p{
+    width: 50%;
+    text-align:justify;
+    font-size: 20px; 
+    color: #333; 
+}
 
 
 </style>

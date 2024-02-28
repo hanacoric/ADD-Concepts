@@ -16,7 +16,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        width: 100vw;
+        width: 80vw;
         height: 15vh;
         
        
@@ -28,6 +28,6 @@
         font-size: 40px
     }
 
-   
+    
 
 </style>
