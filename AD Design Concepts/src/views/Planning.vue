@@ -4,6 +4,7 @@
         <MainNavbar />
         <logo />
         <Planning />
+        <Footer />
 
     </div>
 </template>
@@ -12,12 +13,14 @@
 import MainNavbar from '../components/MainNavbar.vue';
 import logo from '../components/logo.vue';
 import Planning from '../components/planning.vue';
+import Footer from '../components/MainFooter.vue';
 
 export default {
     components: {
         MainNavbar,
         logo,
-        Planning
+        Planning,
+        Footer
     }
 }
 
