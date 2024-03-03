@@ -31,9 +31,12 @@
             <img src="../assets/images/10a Okhill Avenue - Existing and Proposed Elevations A.jpg" alt="Oakhill Avenue, Highgate">
             <p> Oakhill Avenue, Highgate </p>
         </div>
-             <img src="../assets/images/image23.jpg" alt="Ravenscroft Avenue, Golders Green">
+        <div>
+            <img src="../assets/images/image23.jpg" alt="Ravenscroft Avenue, Golders Green">
+            <p>Ravenscroft Avenue, Golders Green</p>
+        </div>
                
-            </div>
+    </div>
     
     <div class="row-three">
         <div class="Bishops-House">
@@ -47,7 +50,7 @@
         <div class="The-Avenue">
                 <img src="../assets/images/9 The Avenue_resize.jpg" alt="The Avenue, London">
                 <p> The Avenue, London </p>
-            </div>
+        </div>
     </div>
     <div class="row-four">
         <div class="Hampstead-Way">

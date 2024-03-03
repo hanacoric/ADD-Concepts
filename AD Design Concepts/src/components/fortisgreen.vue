@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="section-wrapper">
         <div class="container">
                 <div class="Fortis-Green">
                         <h1>Fortis Green, Muswell Hill</h1>
@@ -12,12 +12,13 @@
             </div>
             <div class="text-container-bottom">
                 <p>After failing to secure planning consent for erection of an additional storey to the existing four storey  block of flats, the client appointed AD Designs to take a fresh approach and to secure the consent. From the outset AD Designs researched the reasons for previous refusals and engaged with the planning officers in order to find a workable solution. Consequently, the proposed addition was designed in a minimalist style with lightweight expression. This design has gained the officers’ support, and the application was approved. AD Designs then assisted the client in executing the approved designs and creating rather unique penthouse apartment. </p>
+            </div>
+          <div class="bottom-line-container">
+            <div class="line-bottom">
+            </div>
+          </div>
         </div>
-        <div class="bottom-line-container">
-        <div class="line-bottom">
-        </div>
-        </div>
-        </div>
+
         <div class="image-container">
             <div class="image">
                 <img src="../assets/images/image06.jpg" alt="FortisGreen-image">
@@ -32,6 +33,16 @@
 </script>
 
 <style scoped>
+
+.section-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 170vh;
+}
+
 .container {
     display: flex; 
     align-items: center; 
@@ -49,23 +60,22 @@
 
 .text-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
     flex-direction: column;
-    width: 90vw;
-    height: 50vh;
-    margin-top: 150px;
+    width: 60%;
+    height: 30%;
   }
 
   .text-container-top{
-    width: 40vw;
+    width: 80%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
 
     .text-container-bottom{
-    width: 60vw;
+    width: 80%;
     display: flex;
     justify-content: flex-start;
 
@@ -78,7 +88,7 @@
     }
 
     .bottom-line-container{
-    width: 60vw;
+    width: 80%;
     display: flex;
     justify-content: flex-start;
 
@@ -87,7 +97,7 @@
   .line-top{
     background-color: black; 
     height: 3px; 
-    width: 80%;
+    width: 50%;
   }
  
   .line-bottom{
@@ -95,7 +105,7 @@
     height: 3px; 
     width: 50%;
 
-    
+
   }
 
   .image-container{
@@ -105,7 +115,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    margin-top:150px;
+
     
   }
 

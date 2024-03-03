@@ -13,7 +13,7 @@ import FortisGreen from './views/FortisGreen.vue';
 
 <template>
     <div id="app">
-        <FortisGreen />
+        <PeopleContact />
     </div>
 </template>
 

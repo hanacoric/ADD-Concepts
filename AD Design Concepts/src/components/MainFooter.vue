@@ -18,9 +18,10 @@
     .footer {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
-        height: 80vh;
+        height: 50vh;
+        padding-bottom: 2%;
     }
     .phrase {
         display: flex;
