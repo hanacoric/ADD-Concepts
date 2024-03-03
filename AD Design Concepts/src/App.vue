@@ -8,11 +8,12 @@ import Planning from './views/Planning.vue';
 import ListedBuildings from './views/Listed-Buildings.vue';
 import Residential from './views/Residential.vue';
 import Interiors from './views/Interiors.vue';
+import FortisGreen from './views/FortisGreen.vue';
 </script>
 
 <template>
     <div id="app">
-        <Interiors />
+        <FortisGreen />
     </div>
 </template>
 
