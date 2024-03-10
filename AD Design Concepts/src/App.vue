@@ -29,7 +29,7 @@ import KensingtonChurch from './views/Projects/KensingtonChurch.vue';
 
 <template>
     <div id="app">
-        <KensingtonChurch/>
+        <PeopleContact/>
     </div>
 </template>
 
