@@ -31,12 +31,12 @@
             <img src="../assets/images/10a Okhill Avenue - Existing and Proposed Elevations A.jpg" alt="Oakhill Avenue, Highgate">
             <p> Oakhill Avenue, Highgate </p>
         </div>
-        <div>
+        
+        <div class ="Ravenscroft-Avenue">
             <img src="../assets/images/image23.jpg" alt="Ravenscroft Avenue, Golders Green">
             <p>Ravenscroft Avenue, Golders Green</p>
         </div>
-               
-    </div>
+        
     
     <div class="row-three">
         <div class="Bishops-House">
@@ -92,6 +92,8 @@
             </div>
         </div>
     </div>
+</div>
+    
 
 
 

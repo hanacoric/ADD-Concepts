@@ -8,12 +8,28 @@ import Planning from './views/Planning.vue';
 import ListedBuildings from './views/Listed-Buildings.vue';
 import Residential from './views/Residential.vue';
 import Interiors from './views/Interiors.vue';
-import FortisGreen from './views/FortisGreen.vue';
+import FortisGreen from './views/Projects/FortisGreen.vue';
+import AtriumHouse from './views/Projects/AtriumHouse.vue';
+import Darwen from './views/Projects/Darwen.vue';
+import PrinceAlbert from './views/Projects/PrinceAlbert.vue';
+import OakhillAvenue from './views/Projects/OakhillAvenue.vue';
+import RavenscroftAvenue from './views/Projects/RavenscroftAvenue.vue';
+import BishopsHouse from './views/Projects/BishopsHouse.vue';
+import Stapleton from './views/Projects/Stapleton.vue';
+import TheAvenue from './views/Projects/TheAvenue.vue';
+import HampsteadWay from './views/Projects/HampsteadWay.vue';
+import HungerfordRoad from './views/Projects/HungerfordRoad.vue';
+import HillviewRoad from './views/Projects/HillviewRoad.vue';
+import FinchleyRoad from './views/Projects/FinchleyRoad.vue';
+import HollandPark from './views/Projects/HollandPark.vue';
+import CadoganGardens from './views/Projects/CadoganGardens.vue';
+import PortlandRoad from './views/Projects/PortlandRoad.vue';
+import KensingtonChurch from './views/Projects/KensingtonChurch.vue';
 </script>
 
 <template>
     <div id="app">
-        <PeopleContact />
+        <KensingtonChurch/>
     </div>
 </template>
 

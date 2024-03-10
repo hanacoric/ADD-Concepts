@@ -1,9 +1,9 @@
 <template>
-    <section class="section-wrapper">
+     <section class="section-wrapper">
         <div class="container">
-                <div class="Fortis-Green">
-                        <h1>Fortis Green, Muswell Hill</h1>
-                </div>
+            <div class="Bishops-House">
+                <h1>Bishops’ House, East Finchley  </h1>
+            </div>
         </div>
 
         <div class="text-container">
@@ -11,7 +11,7 @@
                 <div class="line-top"></div>
             </div>
             <div class="text-container-bottom">
-                <p>After failing to secure planning consent for erection of an additional storey to the existing four storey  block of flats, the client appointed AD Designs to take a fresh approach and to secure the consent. From the outset AD Designs researched the reasons for previous refusals and engaged with the planning officers in order to find a workable solution. Consequently, the proposed addition was designed in a minimalist style with lightweight expression. This design has gained the officers’ support, and the application was approved. AD Designs then assisted the client in executing the approved designs and creating rather unique penthouse apartment. </p>
+                <p>AD Designs secured  planning consent to extend and refurbish this office block. The consent included erection of two new floors at the top of the building and the remodelling of external facades.  </p>
             </div>
           <div class="bottom-line-container">
             <div class="line-bottom">
@@ -21,26 +21,23 @@
 
         <div class="image-container">
             <div class="image">
-                <img src="../assets/images/image06.jpg" alt="FortisGreen-image">
+               <img src="../../assets/images/Bishop's House - after_resize.jpg" alt="Bishop’s House, East Finchley">
             </div>
         </div>
-
-        
     </section>
 </template>
 
-<script setup>
+<script>
 </script>
 
 <style scoped>
-
 .section-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    height: 170vh;
+    height: 175vh;
 }
 
 .container {
@@ -49,11 +46,12 @@
     height: 100px;
 }
 
-.Fortis-Green {
+.Bishops-House{
     font-size: 48px; 
     font-weight: bold; 
     line-height: 1; 
     color: #000000;
+    height: 10px;
     margin-left:150px;
 
 }
@@ -83,7 +81,7 @@
 
     .text-container-bottom p{
     text-align: justify;
-    font-size:22px; 
+    font-size:30px; 
     width: 50vw;
     }
 
@@ -97,13 +95,13 @@
   .line-top{
     background-color: black; 
     height: 3px; 
-    width: 50%;
+    width: 40%;
   }
  
   .line-bottom{
     background-color: black; 
     height: 3px; 
-    width: 50%;
+    width: 40%;
 
 
   }
@@ -129,6 +127,4 @@
         width: 60vw;
         height: 80vh;
     }
-
-
 </style>
