@@ -29,16 +29,16 @@ import KensingtonChurch from './views/Projects/KensingtonChurch.vue';
 
 <template>
     <div id="app">
-        <PeopleContact/>
+        <router-view />
     </div>
 </template>
 
 <style scoped>
-#app > div:first-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+#app {
+    width: 100vw;
+    height: 100vh;
+
 }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
     <nav class="nav-links">
             <a href="#">about us</a>
-            <a href="#">services</a>
+            <a href="/services1">services</a>
             <a href="#">people & contact</a>
     </nav>
     
@@ -16,7 +16,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        width: 80vw;
+        width: 100vw;
         height: 15vh;
         
        
