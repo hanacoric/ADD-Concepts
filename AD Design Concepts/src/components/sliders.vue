@@ -1,6 +1,7 @@
 <template>
     <body>
         <div class="background-image">
+            <img src="../assets/images/Image05.jpg" alt="background image">
         </div>
         <div class = "sliders">
             <div class = "arrow-left">
@@ -28,43 +29,7 @@
 </script>
 
 <style scoped>
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../assets/images/Image05.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: -4;
-}
 
-.sliders {
-    justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    
-}
-.arrow-left, .arrow-right {
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-}
 
-.arrow-left{
-    right:25%;
-}
-.arrow-right{
-    left:25%;
-}
+
 </style>

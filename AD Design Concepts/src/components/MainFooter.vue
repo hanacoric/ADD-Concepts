@@ -16,19 +16,21 @@
 <style scoped>
 
     .footer {
+        height: 50vh;
+        width: 100vw;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        height: 50vh;
         padding-bottom: 2%;
     }
     .phrase {
+        width: 100vw;
+        height: 10vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100vw;
-        height: 10vh;
+        
     }
     h2{
         font-size: 45px;

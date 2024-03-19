@@ -1,8 +1,8 @@
 <template>
     <nav class="nav-links">
-            <a href="#">about us</a>
-            <a href="/services1">services</a>
-            <a href="#">people & contact</a>
+            <a href="/aboutus">about us</a>
+            <a href="/services">services</a>
+            <a href="/peopleandcontact">people & contact</a>
     </nav>
     
 </template>

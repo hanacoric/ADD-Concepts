@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <div class="services-container">
       <div class="services-line"></div>
       <div class="services">
@@ -7,63 +7,78 @@
       </div>
     </div>
     <div class="planning-container">
-    <div class="image-planning">
-      <img src="../assets/images/image19.jpg" alt="Planning">
+      <div class="image-planning">
+        <img src="../assets/images/image19.jpg" alt="Planning" />
+      </div>
+      <div class="right-section">
+        <h1 class="planning-header">Planning</h1>
+        <p class="planning-text">
+          Our particular area of expertise is planning advice and obtaining
+          planning permissions. We work closely with Local Planning Authorities,
+          Building Control and other regulatory bodies to obtain the necessary
+          permissions.
+        </p>
+      </div>
     </div>
-    <div class="right-section">
-      <h1 class="planning-header">Planning</h1>
-      <p class="planning-text">
-        Our particular area of expertise is planning advice and obtaining planning permissions. We work closely with
-        Local Planning Authorities, Building Control and other regulatory bodies to obtain the necessary permissions.
-      </p>
+    <div class="listed-container">
+      <div class="text-section">
+        <h1>Listed Buildings &<br />Conservation Areas</h1>
+        <p>
+          We have a wealth of experience working on Listed Buildings and
+          buildings in Conservation areas.
+        </p>
+      </div>
+      <div class="listed-image">
+        <img src="../assets/images/image21.jpg" alt="Listed Buildings" />
+      </div>
     </div>
-  </div>
-  <div class="listed-container">
-    <div class="text-section">
-      <h1>Listed Buildings &<br>Conservation Areas</h1>
-      <p>We have a wealth of experience working on Listed Buildings and buildings in Conservation areas.</p>
-    </div>
-    <div class="listed-image">
-       <img src="../assets/images/image21.jpg" alt="Listed Buildings">
-    </div>
-  </div>
-  <div class="residential-container">
-        <div class="image-residential">
-        <img src="../assets/images/image08.jpg" alt="Residential">
+    <div class="residential-container">
+      <div class="image-residential">
+        <img src="../assets/images/image08.jpg" alt="Residential" />
       </div>
       <div class="residential-section">
         <h1 class="residential-header">Residential</h1>
         <p class="residential-text">
-          Our work stretches from domestic extensions and conversion, through new build houses to large new blocks of flats..
+          Our work stretches from domestic extensions and conversion, through
+          new build houses to large new blocks of flats..
         </p>
       </div>
-  </div>
-  <div class="interiors-container">
-    <div class="interiors-section">
+    </div>
+    <div class="interiors-container">
+      <div class="interiors-section">
         <h1>Interiors</h1>
-        <p>We have a wealth of experience working on Listed Buildings and buildings in Conservation areas.</p>
+        <p>
+          We have a wealth of experience working on Listed Buildings and
+          buildings in Conservation areas.
+        </p>
       </div>
       <div class="interiors-image">
-         <img src="../assets/images/image12.jpg" alt="Interiors">
+        <img src="../assets/images/image12.jpg" alt="Interiors" />
       </div>
-  </div>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script></script>
 
 <style scoped>
+section {
+  height: 1900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .services-container {
   display: flex;
   align-items: center;
-  height: 100px;
 }
 
 .services-line {
-  flex: none;
   background-color: black;
   height: 5px;
-  width: 100px;
+  width: 150px;
 }
 
 .services {
@@ -74,34 +89,35 @@
 }
 
 .planning-container {
+  width: 75%;
+  height: 420px;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  width: 100vw;
-  max-width: 1300px;
-  height: 60vh;  
+  flex-direction: row;
+  margin-top: 100px;
 }
 
 .image-planning {
-  justify-content: flex-end; 
+  width: 50%;
+  height: 100%;
   display: flex;
-  align-items: center; 
-  flex: 1;
-  margin-top: 200px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .image-planning img {
   display: block;
-  width: 100%; 
-  height: 100%;
-  max-width: 400px; 
+  width: 500px;
+  height: 300px;
 }
 
 .right-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end; /* Align items to the right */
-  flex: 1;
+  align-items: flex-end;
 }
 
 .planning-header {
@@ -109,7 +125,6 @@
   font-weight: bold;
   text-align: right;
   color: #000000;
-  margin: 0; /* Reset margin for the header */
 }
 
 .planning-text {
@@ -117,87 +132,82 @@
   line-height: 1.5;
   color: #000000;
   text-align: right;
-  margin-top: 20px; 
+  margin-top: 20px;
   max-width: 600px;
 }
 
 .listed-container {
- display: flex;
-  align-items: center; /* This will vertically center the items */
-  justify-content: center; /* This will horizontally center the items */
-  width: 100vw;
-  max-width: 1000px;
-  height: 80vh;
-  margin: 0 auto; 
-  text-align: center;
+  width: 75%;
+  height: 420px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
 }
-
 
 .text-section h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 600px;
-  flex: 1;
   font-size: 58px;
   font-weight: bold;
   text-align: left;
   color: #000000;
 }
 
-.text-section p {
- font-size: 25px;
-  line-height: 1.5;
-  color: #000000;
-  text-align: left;
-  margin-top: 30px; 
-  max-width: 400px;
-}
-
 .listed-image {
-  justify-content: flex-start; 
+  width: 50%;
+  height: 100%;
   display: flex;
-  align-items: center; 
-  flex: 1;
-  margin-top: 330px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .listed-image img {
   display: block;
-  width: 100%; 
-  height: 100%;
-  max-width: 400px; 
+  width: 500px;
+  height: 300px;
+}
+
+.text-section p {
+  font-size: 25px;
+  line-height: 1.5;
+  color: #000000;
+  text-align: left;
+  margin-top: 20px;
 }
 
 .residential-container {
+  width: 75%;
+  height: 420px;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  width: 100vw;
-  max-width: 1300px;
-  height: 60vh;  
+  flex-direction: row;
 }
 
 .image-residential {
-  justify-content: flex-end; 
+  width: 50%;
+  height: 100%;
   display: flex;
-  align-items: center; 
-  flex: 1;
-  margin-top: 250px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .image-residential img {
   display: block;
-  width: 100%; 
-  height: 100%;
-  max-width: 400px; 
+  width: 500px;
+  height: 300px;
 }
 
 .residential-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end; /* Align items to the right */
-  flex: 1;
+  align-items: flex-end;
 }
 
 .residential-header {
@@ -205,7 +215,6 @@
   font-weight: bold;
   text-align: right;
   color: #000000;
-  margin: 0; /* Reset margin for the header */
 }
 
 .residential-text {
@@ -213,20 +222,17 @@
   line-height: 1.5;
   color: #000000;
   text-align: right;
-  margin-top: 20px; 
+  margin-top: 20px;
   max-width: 450px;
 }
 .interiors-container {
- display: flex;
-  align-items: center; /* This will vertically center the items */
-  justify-content: center; /* This will horizontally center the items */
-  width: 100vw;
-  max-width: 1000px;
-  height: 60vh;
-  margin: 0 auto; 
-  text-align: center;
+  width: 75%;
+  height: 420px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
 }
-
 
 .interiors-section h1 {
   display: flex;
@@ -241,29 +247,26 @@
 }
 
 .interiors-section p {
- font-size: 25px;
+  font-size: 25px;
   line-height: 1.5;
   color: #000000;
   text-align: left;
-  margin-top: 30px; 
+  margin-top: 30px;
   max-width: 400px;
 }
 
 .interiors-image {
-  justify-content: space-around; 
+  width: 50%;
+  height: 100%;
   display: flex;
-  align-items: center; 
-  flex: 1;
-  margin-top: 300px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .interiors-image img {
   display: block;
-  width: 100%; 
-  height: 100%;
-  max-width: 400px; 
+  width: 500px;
+  height: 300px;
 }
-
-
-
 </style>
