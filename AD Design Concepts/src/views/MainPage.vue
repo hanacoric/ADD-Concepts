@@ -1,27 +1,20 @@
 <template>
-    <div>
-        <HamburgerMenu />
-        <Sliders />
-    </div>
-        
+  <div>
+    <Sliders />
+  </div>
 </template>
 
 <script>
-import HamburgerMenu from '@/components/hamburger-menu.vue';
-import Sliders from '@/components/sliders.vue';
+import HamburgerMenu from "@/components/hamburger-menu.vue";
+import Sliders from "@/components/sliders.vue";
 
 export default {
-    name: 'MainPage',
-    components: {
-        HamburgerMenu,
-        Sliders,
-    }
-    }
+  name: "MainPage",
+  components: {
+    HamburgerMenu,
+    Sliders,
+  },
+};
+</script>
 
-    </script>
-
-    <style scoped>
-    </style>
-
-
-
+<style scoped></style>

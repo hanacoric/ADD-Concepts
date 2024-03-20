@@ -1,11 +1,14 @@
 <template>
   <section>
-    <div class="services-container">
-      <div class="services-line"></div>
-      <div class="services">
-        <h1>SERVICES</h1>
+    <div class="services-container-wrapper">
+      <div class="services-container">
+        <div class="services-line"></div>
+        <div class="services">
+          <h1>SERVICES</h1>
+        </div>
       </div>
     </div>
+
     <div class="planning-container">
       <div class="image-planning">
         <img src="../assets/images/image19.jpg" alt="Planning" />
@@ -68,6 +71,12 @@ section {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.services-container-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .services-container {
