@@ -25,7 +25,6 @@ import HollandPark from "./views/Projects/HollandPark.vue";
 import CadoganGardens from "./views/Projects/CadoganGardens.vue";
 import PortlandRoad from "./views/Projects/PortlandRoad.vue";
 import KensingtonChurch from "./views/Projects/KensingtonChurch.vue";
-import Navbar from "./views/Navbar-frontpage.vue";
 </script>
 
 <template>

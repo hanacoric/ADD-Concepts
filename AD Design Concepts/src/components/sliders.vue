@@ -1,20 +1,58 @@
 <template>
   <section class="main-section">
-    <div class="hamburger-menu hamburger-menu-open">
+    <div class="nav-content disabled">
+      <div class="wrapper">
+        <a href="aboutus">about us</a>
+        <div class="line"></div>
+      </div>
+      <div class="wrapper">
+        <a href="/projects">projects</a>
+        <div class="line"></div>
+      </div>
+      <div class="wrapper">
+        <a href="/services">services</a>
+        <div class="line"></div>
+      </div>
+      <div class="wrapper">
+        <a href="peopleandcontact">people & <br />contacts</a>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="hamburger-menu hamburger-menu-open" id="hamburger-id">
+      <!-- Hamburger Icon -->
       <svg
-        class="hamburger-menu-svg"
-        id="hamburger-id"
-        width="800px"
-        height="800px"
+        class="icon-hamburger"
+        xmlns="http://www.w3.org/2000/svg"
+        width="70"
+        height="70"
         viewBox="0 0 24 24"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"
-          fill="#000000"
+          d="M4 5H20M4 12H20M4 19H20"
+          stroke="black"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <!-- Close Icon, initially hidden -->
+      <svg
+        class="icon-close"
+        xmlns="http://www.w3.org/2000/svg"
+        width="70"
+        height="70"
+        viewBox="0 0 24 24"
+        fill="none"
+        style="display: none"
+      >
+        <path
+          d="M6 6L18 18M6 18L18 6"
+          stroke="black"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         />
       </svg>
     </div>
@@ -105,71 +143,42 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", (event) => {
-  const hamburgerMenu = document.querySelector(".hamburger-menu");
+  const hamburgerMenu = document.getElementById("hamburger-id");
   if (hamburgerMenu) {
-    hamburgerMenu.addEventListener("click", openMenu);
+    hamburgerMenu.addEventListener("click", toggleMenuIcons);
   }
 });
 
-function openMenu() {
-  replaceButton();
-  setBackdrop();
-  addContent();
-}
+function toggleMenuIcons() {
+  const hamburgerIcon = document.querySelector(".icon-hamburger");
+  const closeIcon = document.querySelector(".icon-close");
 
-function replaceButton() {
-  // Get the old element you want to replace
-  var oldElement = document.getElementById("hamburger-id");
-  var newElement = document.createElement("svg");
-
-  // Replace the old element by setting outerHTML to new content
-  newElement.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="66.999" height="59.561" viewBox="0 0 66.999 59.561">
-            <g id="Group_19" data-name="Group 19" transform="translate(-1080.18 -431.519)">
-                <line id="Line_7" data-name="Line 7" x2="63.705" y2="55.8" transform="translate(1081.828 433.4)" fill="none" stroke="#fff" stroke-width="5"/>
-                <line id="Line_8" data-name="Line 8" y1="55.8" x2="63.705" transform="translate(1081.828 433.4)" fill="none" stroke="#fff" stroke-width="5"/>
-            </g>
-        </svg>`;
-
-  newElement.className = oldElement.className;
-  oldElement.parentNode.replaceChild(newElement, oldElement);
-}
-
-function setBackdrop() {
-  // Remove all child elements of the sliders container
-  const sliders = document.querySelector(".sliders");
-  if (sliders) {
-    sliders.outerHTML = ""; // This removes all child elements
+  // Check if the hamburger icon is currently displayed
+  if (hamburgerIcon.style.display === "none") {
+    // If the hamburger icon is hidden, show it and hide the close icon
+    hamburgerIcon.style.display = "block";
+    closeIcon.style.display = "none";
+  } else {
+    // If the hamburger icon is shown, hide it and show the close icon
+    hamburgerIcon.style.display = "none";
+    closeIcon.style.display = "block";
   }
 
-  // Apply a blur effect to the background image of the main section
+  // Here, call any other functions you need to toggle, such as showing/hiding the navigation content or applying a blur effect
+  const navContent = document.querySelector(".nav-content");
   const mainSection = document.querySelector(".main-section");
-  if (mainSection) {
-    mainSection.classList.toggle("active-blur");
-  }
-}
 
-function addContent() {
-  const mainSection = document.querySelector(".main-section");
-  if (mainSection) {
-    const navcontent = document.createElement("div");
-    navcontent.innerHTML = `<a href="">About us</a>
-      <span class="line"></span>
-      <a href="">Projects</a>
-      <span class="line"></span>
-      <a href="">Services</a>
-      <span class="line"></span>
-      <a href="">People & contacts</a>
-      <span class="line"></span>`;
-    navcontent.className = "nav-content";
-    mainSection.appendChild(navcontent);
-  }
+  // Toggle the disabled class on nav-content to show/hide
+  navContent.classList.toggle("disabled");
+  // Toggle the active-blur class on main-section to enable/disable blur
+  mainSection.classList.toggle("active-blur");
 }
 </script>
 
 <style scoped>
 .main-section {
   width: 100vw;
-  height: 786px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -249,11 +258,43 @@ function addContent() {
 }
 
 .nav-content {
-  background-color: red;
-  width: 100vw;
+  height: 50vh;
+  position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  z-index: 3;
+  right: 0; /* Align to the right edge of the nearest positioned ancestor */
+  top: 50%; /* Start at the vertical center of the nearest positioned ancestor */
+  transform: translateY(-60%);
+}
+
+.nav-content a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 4.5rem;
+}
+
+.nav-content .line {
+  margin-top: 60px;
+  width: 100px;
+  height: 5px;
+  background-color: #fff;
+}
+
+.nav-content .wrapper {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0;
 }
 </style>

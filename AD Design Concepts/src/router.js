@@ -25,7 +25,6 @@ import hollandpark from "./views/Projects/HollandPark.vue";
 import cadogangardens from "./views/Projects/CadoganGardens.vue";
 import portlandroad from "./views/Projects/PortlandRoad.vue";
 import kensingtonchurch from "./views/Projects/KensingtonChurch.vue";
-import Navbar from "./views/Navbar-frontpage.vue";
 
 export default createRouter({
   history: createWebHistory(),
@@ -34,10 +33,7 @@ export default createRouter({
       path: "/",
       component: MainPage,
     },
-    {
-      path: "/navfrontpage",
-      component: Navbar,
-    },
+
     {
       path: "/aboutus",
       component: AboutUs,
