@@ -24,19 +24,18 @@
       </div>
     </div>
 
-    <div class="image-container">
-      <div class="image-container-top">
-        <div class="line-top"></div>
-      </div>
-
-      <div class="image-container-bottom">
-        <img src="../assets/images/image06.jpg" alt="Aboutus-image" />
-      </div>
-
-      <div class="bottom-line-container">
-        <div class="line-bottom"></div>
-      </div>
+    <div class="image-container-top">
+      <div class="line-top"></div>
     </div>
+
+    <div class="image-container-bottom">
+      <img src="../assets/images/image06.jpg" alt="Aboutus-image" />
+    </div>
+
+    <div class="bottom-line-container">
+      <div class="line-bottom"></div>
+    </div>
+
     <div class="right-text-below">
       <p>
         The majority of the projects that we have been involved with are based
@@ -74,8 +73,11 @@ h3 {
 }
 
 .aboutus-root {
-  width: 100vw;
-  height: 100vh;
+  height: 120vw;
+  width: 98.6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .aboutus-container {
   display: flex;
@@ -99,15 +101,17 @@ h3 {
 
 .right-text {
   display: flex;
-  float: right;
-  height: 10%;
+  justify-content: flex-end;
   width: 100%;
   text-align: right;
-  line-height: 3px;
-  font-size: 40px;
+  font-size: 33px;
   font-weight: bold;
   line-height: 1;
   color: #000000;
+}
+
+.right-text h3 {
+  width: 45%;
 }
 
 .left-text {
@@ -115,7 +119,7 @@ h3 {
   float: left;
   text-align: justify;
   height: 10%;
-  width: 100%;
+  width: 50%;
   text-align: left;
   font-size: 30px;
   font-weight: bold;
@@ -125,21 +129,12 @@ h3 {
 
 img {
   height: 60vh;
-  width: 50vw;
+  width: 50%;
   display: block;
 }
 
-.image-container {
-  width: 100vw;
-  height: 70vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-
 .image-container-top {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
@@ -147,7 +142,7 @@ img {
 }
 
 .image-container-bottom {
-  width: 80vw;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -155,7 +150,7 @@ img {
 }
 
 .bottom-line-container {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -175,10 +170,8 @@ img {
 
 .right-text-below {
   display: flex;
-  float: right;
+  justify-content: flex-end;
   text-align: right;
-  text-align: justify;
-  height: 10%;
   width: 100%;
   font-size: 30px;
   font-weight: bold;
@@ -186,11 +179,15 @@ img {
   color: #000000;
 }
 
+.right-text-below p,
+.left-text-below p {
+  width: 70%;
+}
+
 .left-text-below {
   display: flex;
-  float: left;
+  justify-content: flex-start;
   text-align: justify;
-  height: 10%;
   width: 100%;
   text-align: right;
   font-size: 30px;
