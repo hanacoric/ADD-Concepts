@@ -13,15 +13,14 @@
         based in NW London
       </h3>
     </div>
-    <div>
-      <div class="left-text">
-        <p>
-          Over the years AD Design Concepts have successfully completed a broad
-          range of projects, including: domestic extensions and loft
-          conversions, new build houses, large new build block of flats and
-          office refurbishments.
-        </p>
-      </div>
+
+    <div class="left-text">
+      <p>
+        Over the years AD Design Concepts have successfully completed a broad
+        range of projects, including: domestic extensions and loft conversions,
+        new build houses, large new build block of flats and office
+        refurbishments.
+      </p>
     </div>
 
     <div class="image-container-top">
@@ -78,12 +77,14 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .aboutus-container {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
   align-items: center;
+  width: 100%;
 }
 
 .aboutus-line {
@@ -102,7 +103,7 @@ h3 {
 .right-text {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  width: 90%;
   text-align: right;
   font-size: 33px;
   font-weight: bold;
@@ -116,15 +117,18 @@ h3 {
 
 .left-text {
   display: flex;
-  float: left;
+  justify-content: flex-start;
   text-align: justify;
-  height: 10%;
-  width: 50%;
+  width: 90%;
   text-align: left;
   font-size: 30px;
   font-weight: bold;
   line-height: 1.2;
   color: #000000;
+}
+
+.left-text p {
+  width: 50%;
 }
 
 img {
@@ -172,7 +176,7 @@ img {
   display: flex;
   justify-content: flex-end;
   text-align: right;
-  width: 100%;
+  width: 90%;
   font-size: 30px;
   font-weight: bold;
   line-height: 1.3;
@@ -188,7 +192,7 @@ img {
   display: flex;
   justify-content: flex-start;
   text-align: justify;
-  width: 100%;
+  width: 90%;
   text-align: right;
   font-size: 30px;
   font-weight: bold;
