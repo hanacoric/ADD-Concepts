@@ -172,10 +172,42 @@ function toggleMenuIcons() {
   navContent.classList.toggle("disabled");
   // Toggle the active-blur class on main-section to enable/disable blur
   mainSection.classList.toggle("active-blur");
+
+  if (navContent.classList.contains("disabled")) {
+    navContent.classList.remove("animate");
+    navContent.classList.add("animate-out");
+  } else {
+    navContent.classList.remove("animate-out");
+    navContent.classList.add("animate");
+  }
 }
 </script>
 
 <style scoped>
+
+@keyframes slideInRightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutLeftToRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+
 .main-section {
   width: 100vw;
   height: 100vh;
@@ -266,8 +298,7 @@ function toggleMenuIcons() {
   align-items: flex-end;
   z-index: 3;
   right: 0; /* Align to the right edge of the nearest positioned ancestor */
-  top: 50%; /* Start at the vertical center of the nearest positioned ancestor */
-  transform: translateY(-60%);
+ 
 }
 
 .nav-content a {
@@ -290,6 +321,14 @@ function toggleMenuIcons() {
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
+}
+
+.nav-content.animate{
+  animation: slideInRightToLeft 0.5s forwards;
+}
+
+.nav-content.animate-out{
+  animation: slideOutLeftToRight 0.5s forwards;
 }
 
 .disabled {

@@ -7,8 +7,8 @@
       </div>
     </div>
 
-    <div class="projects-pictures">
-      <div class="row">
+    <div class="projects-pictures" >
+      <div class="row" id="pictures">
         <div class="Fortis-Green">
           <img src="../assets/images/image06.jpg" alt="Fortis Green" />
           <p>Fortis Green</p>
@@ -173,9 +173,61 @@
   </section>
 </template>
 
-<script></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const imgElements = document.querySelectorAll('img');
+
+  imgElements.forEach(img => {
+    img.classList.add('blackandwhite');
+
+    });
+});
+
+</script>
 
 <style scoped>
+
+@keyframes growAndRemoveFilter {
+  0% {
+    transform: scale(1);
+    filter: grayscale(100%);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+  }
+}
+
+@keyframes shrinkAndApplyFilter {
+  0% {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+  }
+  100% {
+    transform: scale(1);
+    filter: grayscale(100%);
+  }
+}
+
+@keyframes textSlide {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+img:hover {
+  animation: growAndRemoveFilter 0.5s forwards;
+}
+
+img:not(:hover) {
+  animation: shrinkAndApplyFilter 0.5s forwards;
+}
+
+
 .projects-container {
   display: flex;
   align-items: center;
@@ -425,5 +477,9 @@
   text-align: justify;
   font-size: 20px;
   color: #333;
+}
+
+.blackandwhite {
+  filter: grayscale(100%);
 }
 </style>
