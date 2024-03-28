@@ -477,7 +477,7 @@ img:not(:hover) {
   flex-direction: row;
   width: 100%;
   margin-top: 50px;
-  margin-left: 200px;
+  
 }
 
 .text p {
@@ -490,4 +490,125 @@ img:not(:hover) {
 .blackandwhite {
   filter: grayscale(100%);
 }
+
+
+
+@media (max-width: 768px) {
+
+  @keyframes shrinkAndApplyFilter {
+  0% {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+  }
+  100% {
+    transform: scale(1);
+    filter: grayscale(100%);
+  }
+}
+
+@keyframes textSlide {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+img:hover {
+  animation: growAndRemoveFilter 0.5s forwards;
+}
+
+img:not(:hover) {
+  animation: shrinkAndApplyFilter 0.5s forwards;
+}
+  
+
+  .projects-container {
+    margin-bottom: 50px;
+  }
+
+  .projects h1 {
+    font-size: 50px;
+    line-height: 1.5;
+    font-weight: bold;
+    
+  }
+
+  .projects-line {
+    height: 2px;
+    width: 100px;
+  }
+  .projects {
+    font-size: 30px; 
+    line-height: 1.5; 
+  }
+
+  
+  .row, .row-two, .row-three, .row-four, .row-five, .row-six {
+    flex-direction: column;
+    align-items: center; 
+    height: auto;
+  }
+
+
+  .row > div, .row-two > div, .row-three > div, .row-four > div, .row-five > div, .row-six > div {
+    width: 100%; 
+    flex-basis: auto;
+  }
+
+  .row img, .row-two img, .row-three img, .row-four img, .row-five img, .row-six img {
+    width: 80%; /* Make images full width */
+    max-width: none; /* Remove max width restriction */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add space below the image */
+    
+  }
+
+  /* Adjust paragraph styles inside rows */
+  .row p, .row-two p, .row-three p, .row-four p, .row-five p, .row-six p {
+    font-size: 18px; /* Adjust font size for readability */
+    margin-top: 10px; /* Reduce space above the paragraph */
+    text-align: center; /* Center align the text */
+    margin-bottom: 50px; /* Add space below the paragraph */
+  }
+
+  .text-container {
+    margin-top: 50px; /* Adjust the top margin of the text container */
+  }
+
+  .domestic-projects {
+    margin-left: 0; /* Remove left margin */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children */
+  }
+
+  .domestic-projects h2 {
+    font-size: 26px; /* Adjust font size for readability */
+    line-height: 1.5; /* Adjust line height for readability */
+    margin-bottom: 20px;
+  }
+
+  .line-wrapper {
+    display: none;
+  }
+
+  .text {
+    display:flex;
+    justify-content: center; /* Center text */
+    align-items: center; /* Center text */
+    flex-direction: column; /* Stack children vertically */
+    width: 100%; /* Adjust width for readability */
+    margin-top: 20px; /* Adjust top margin for spacing */
+  }
+
+  .text p {
+    font-size: 18px; /* Adjust font size for readability */
+    width: 70%; /* Full width for text */
+    text-align: justify; /* Justify text for readability */
+
+
+  }
+}
+
 </style>

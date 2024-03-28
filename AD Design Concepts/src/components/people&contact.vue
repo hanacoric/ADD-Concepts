@@ -56,7 +56,7 @@
   justify-content: flex-start;
   flex-direction: row;
   align-items: center;
-  height: 60vh;
+  height: 70vh;
 }
 
 .people-contact-line {
@@ -73,7 +73,7 @@
 }
 
 .info {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;

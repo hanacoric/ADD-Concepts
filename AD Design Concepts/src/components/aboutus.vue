@@ -131,7 +131,7 @@ h3 {
 }
 
 img {
-  height: 70vh;
+  height: 100%;
   width: 70%;
   display: block;
 }
@@ -197,4 +197,109 @@ img {
   line-height: 1.3;
   color: #000000;
 }
+
+@media (max-width: 768px) {
+  .aboutus-root{
+    height: 90vh;
+  }
+
+  .aboutus-container {
+    margin-bottom: 50px;
+  }
+
+  .aboutus h1 {
+    font-size: 50px;
+    line-height: 1.5;
+    font-weight: bold;
+    
+  }
+
+  .aboutus-line {
+    height: 2px;
+    width: 70px;
+  }
+
+
+  .left-text {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .left-text p {
+    font-size: 15px;
+    line-height: 1.5;
+    width: 80%;
+  }
+  
+  .image-container-top,
+  .image-container-bottom,
+  .bottom-line-container {
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children */
+  }
+
+
+  .right-text,
+  .left-text,
+  .right-text-below,
+  .left-text-below {
+    display: flex;
+    justify-content: center; /* Center text */
+    width: 80%; 
+    text-align: center; 
+    line-height: 1.4; 
+  }
+
+  .right-text h3 {
+    font-size: 23px;
+    line-height: 1.4;
+    width:80%;
+    text-align: right;
+    margin-bottom: 20px;
+
+   
+  }
+
+  .left-text p{
+    font-size: 18px;
+    line-height: 1.5;
+    width: 80%;
+    text-align: justify;
+    margin-bottom: 50px;
+  }
+
+  .line-top,
+  .line-bottom {
+    display: none;
+  }
+
+  img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Adjust height automatically */
+    margin-bottom:50px
+  }
+
+  .right-text-below p {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 80%;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  .left-text-below p {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 80%;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  /* Override RTL direction for H3 on small screens if necessary */
+  h3 {
+    direction: ltr; /* Change to ltr if the RTL layout is not needed on mobile */
+  }
+}
+
 </style>

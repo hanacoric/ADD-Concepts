@@ -61,4 +61,37 @@ nav a {
   text-decoration: none;
   font-size: 40px;
 }
+
+/*@media (max-width: 768px) {
+  nav {
+    
+    flex-direction: column;
+    justify-content: flex-start; 
+    float:right;
+    height: 100vh; 
+    padding-top: 20px; 
+  }
+
+  nav a {
+   
+    font-size: 24px; 
+    margin-bottom: 20px; 
+    color: black;
+    text-decoration: none;
+    display: block; 
+    justify-content: flex-start;
+    text-align: left; 
+    padding-left: 20px; 
+  }
+  
+ 
+  nav a:not(:last-child):after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid black;
+    margin: 8px 0; 
+  }
+}
+*/
+
 </style>

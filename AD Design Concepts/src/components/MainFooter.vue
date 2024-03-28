@@ -60,4 +60,33 @@
         text-decoration: none;
         font-size: 30px;
     }
+
+    @media (max-width: 768px) {
+        .footer {
+            justify-content: space-evenly;
+            padding-bottom: 0;
+            height:10vh;
+            margin-top: 100px;
+            margin-bottom: 50px;
+        }
+
+        .phrase {
+            height: max-content;
+        }
+        h2 {
+            font-size: 20px;
+            
+        }
+        .centered-line {
+            width: 40vw;
+        }
+
+        .info {
+            height: max-content;
+        }
+        .info a {
+            font-size: 18px;
+            height: 0px;
+        }
+    }
 </style>

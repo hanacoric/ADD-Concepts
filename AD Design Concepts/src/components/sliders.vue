@@ -14,7 +14,7 @@
         <div class="line"></div>
       </div>
       <div class="wrapper">
-        <a href="peopleandcontact">people & <br />contacts</a>
+        <a href="peopleandcontact">people & contact</a>
         <div class="line"></div>
       </div>
     </div>
@@ -242,7 +242,7 @@ function toggleMenuIcons() {
   cursor: pointer;
 }
 .hamburger-menu-svg:hover path {
-  fill: #7d7d7d5f;
+  fill: #4847475f;
 }
 
 .sliders {
@@ -336,4 +336,145 @@ function toggleMenuIcons() {
   cursor: not-allowed;
   opacity: 0;
 }
+
+@media (max-width: 768px) {
+
+.main-section {
+  justify-content: center;
+  align-items: stretch;
+  background-image: url(../assets/images/Image05-mobile.jpg);
+}
+
+.hamburger-menu {
+  top: 10px; 
+  right: 10px; 
+}
+
+.hamburger-menu-svg {
+
+  width: 30%;
+  height: 25%;
+}
+
+.sliders {
+  flex-direction: column; 
+  justify-content: flex-start;
+  height: auto; 
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+.arrow-left,
+.arrow-right {
+  width: 20px; 
+  height: 20px;
+
+
+}
+
+.slider-text {
+  width: 60%; 
+  padding: 10px; 
+  box-sizing: border-box; 
+}
+
+.main-section::before {
+
+  filter: blur(5px); 
+}
+
+.nav-content {
+  height: auto; /* Adjust height based on content */
+  flex-direction: row; /* Align items in a row for a horizontal menu */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  bottom: 0; /* Position at the bottom of the screen */
+  right: auto; /* Reset alignment from the right */
+  left: 0; /* Stretch from the left edge */
+  width: 100%; /* Full width */
+}
+
+.nav-content a {
+  /* Adjust navigation links */
+  font-size: 2rem; /* Smaller font size for links */
+  margin: 0 3px; /* Add margin between links */
+}
+
+.nav-content .line {
+  /* Adjust decorative line if needed */
+  display: none; /* Hide the line on smaller screens if it doesn't fit */
+}
+
+.nav-content .wrapper {
+  /* Adjust wrapper layout */
+  width: auto; /* Allow it to grow with the content */
+  flex-wrap: wrap; /* Allow items to wrap if space is insufficient */
+}
+
+  .main-section::before {
+    /* Enhanced blur effect */
+    filter: blur(12px);
+  }
+
+  .main-section.active-blur::before {
+    /* Make sure the z-index is higher than the other elements but lower than the navigation content */
+    z-index: 2; 
+  }
+
+  /* Adjust the navigation content to be full-screen with flexbox centering */
+  .nav-content {
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height to cover the entire viewport */
+    position: fixed; /* Fixed position to stay in place during scroll */
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
+    left: 0; /* Align to the left */
+    bottom: 0; /* Align to the bottom */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 10; /* Make sure it's on top of other content */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .nav-content a {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    margin: 15px 0; /* Add vertical margin between links */
+    color: #fff; /* White color for the text */
+ 
+  }
+
+  .nav-content .line {
+    width: 50px; /* Shorter lines for smaller screens */
+    margin-top: 15px; /* Less space above the line */
+    background-color: #fff; /* White color for the line */
+  }
+
+  /* Adjust the individual wrapper for the navigation links if necessary */
+  .nav-content .wrapper {
+    width: 100%; /* Full width */
+    padding: 0 20px; /* Padding on the sides */
+    box-sizing: border-box; /* Include padding in width calculation */
+    justify-content: center; /* Center items in the wrapper */
+  }
+
+  /* Handle the opening and closing animations for the mobile menu */
+  .nav-content.animate {
+    animation: slideInRightToLeft 0.5s forwards;
+  }
+
+  .nav-content.animate-out {
+    animation: slideOutLeftToRight 0.5s forwards;
+  }
+
+  .disabled {
+    opacity: 0.5; 
+  }
+}
+
+
+
 </style>
+

@@ -37,4 +37,19 @@
     margin: 0 auto; 
     
 }
+
+@media (max-width: 768px) {
+    .logo svg{
+        width: 80%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+}
 </style>
