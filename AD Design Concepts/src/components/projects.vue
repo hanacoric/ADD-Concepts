@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section classs="project-root">
     <div class="projects-container">
       <div class="projects-line"></div>
       <div class="projects">
@@ -227,6 +227,14 @@ img:not(:hover) {
   animation: shrinkAndApplyFilter 0.5s forwards;
 }
 
+.project-root{
+  height: 350vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .projects-container {
   display: flex;
@@ -238,12 +246,12 @@ img:not(:hover) {
   flex: none;
   background-color: black;
   height: 5px;
-  width: 100px;
+  width: 200px;
 }
 .projects {
-  font-size: 48px;
+  font-size: 60px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 2.5;
   color: #000000;
 }
 
@@ -277,8 +285,8 @@ img:not(:hover) {
 
 .row p {
   color: #333;
-  font-size: 16px;
-  margin-top: 8px;
+  font-size: 20px;
+  margin-top: 20px;
   justify-content: center;
 }
 .row-two {
@@ -304,8 +312,8 @@ img:not(:hover) {
 
 .row-two p {
   color: #333;
-  font-size: 16px;
-  margin-top: 10px;
+  font-size: 20px;
+  margin-top: 20px;
   justify-content: center;
   text-align: center;
 }
@@ -334,8 +342,8 @@ img:not(:hover) {
 
 .row-three p {
   color: #333;
-  font-size: 16px;
-  margin-top: 8px;
+  font-size: 20px;
+  margin-top: 20px;
   justify-content: left;
 }
 
@@ -363,8 +371,8 @@ img:not(:hover) {
 
 .row-four p {
   color: #333;
-  font-size: 16px;
-  margin-top: 8px;
+  font-size: 20px;
+  margin-top: 20px;
   justify-content: left;
 }
 
@@ -392,8 +400,8 @@ img:not(:hover) {
 
 .row-five p {
   color: #333;
-  font-size: 16px;
-  margin-top: 8px;
+  font-size: 20px;
+  margin-top: 20px;
   justify-content: left;
 }
 
@@ -421,8 +429,8 @@ img:not(:hover) {
 
 .row-six p {
   color: #333;
-  font-size: 16px;
-  margin-top: 8px;
+  font-size: 20px;
+  margin-top: 20px;
   justify-content: left;
 }
 
@@ -450,7 +458,7 @@ img:not(:hover) {
 }
 
 .domestic-projects h2 {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
   line-height: 1;
   color: #000000;
@@ -473,9 +481,9 @@ img:not(:hover) {
 }
 
 .text p {
-  width: 50%;
+  width: 60%;
   text-align: justify;
-  font-size: 20px;
+  font-size: 28px;
   color: #333;
 }
 

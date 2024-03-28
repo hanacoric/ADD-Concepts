@@ -72,7 +72,7 @@ h3 {
 }
 
 .aboutus-root {
-  height: 120vw;
+  height: 320vh;
   width: 98.6%;
   display: flex;
   flex-direction: column;
@@ -91,49 +91,48 @@ h3 {
   flex: none;
   background-color: black;
   height: 5px;
-  width: 100px;
+  width: 200px;
 }
 .aboutus {
-  font-size: 48px;
+  font-size: 60px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 2.5;
   color: #000000;
 }
 
 .right-text {
   display: flex;
   justify-content: flex-end;
-  width: 90%;
+  width: 80%;
   text-align: right;
-  font-size: 33px;
-  font-weight: bold;
+  font-size: 45px;
+  font-weight: bolder;
   line-height: 1;
   color: #000000;
 }
 
 .right-text h3 {
-  width: 45%;
+  width: 67%;
 }
 
 .left-text {
   display: flex;
   justify-content: flex-start;
   text-align: justify;
-  width: 90%;
+  width: 70%;
   text-align: left;
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 1.2;
+  font-size: 38px;
+ line-height: 1.2;
   color: #000000;
 }
 
 .left-text p {
-  width: 50%;
+  width: 70%;
 }
 
 img {
-  height: 60vh;
-  width: 50%;
+  height: 70vh;
+  width: 70%;
   display: block;
 }
 
@@ -146,7 +145,7 @@ img {
 }
 
 .image-container-bottom {
-  width: 90%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -176,25 +175,24 @@ img {
   display: flex;
   justify-content: flex-end;
   text-align: right;
-  width: 90%;
-  font-size: 30px;
-  font-weight: bold;
+  width: 80%;
+  font-size: 38px;
   line-height: 1.3;
   color: #000000;
 }
 
 .right-text-below p,
 .left-text-below p {
-  width: 70%;
+  width: 80%;
 }
 
 .left-text-below {
   display: flex;
   justify-content: flex-start;
   text-align: justify;
-  width: 90%;
+  width: 80%;
   text-align: right;
-  font-size: 30px;
+  font-size: 38px;
   font-weight: bold;
   line-height: 1.3;
   color: #000000;

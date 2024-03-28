@@ -66,7 +66,8 @@
 
 <style scoped>
 section {
-  height: 1900px;
+  height: 240vh;
+  width: 98.6%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -85,21 +86,22 @@ section {
 }
 
 .services-line {
+  flex: none;
   background-color: black;
   height: 5px;
-  width: 150px;
-}
+  width: 200px;
+ }
 
 .services {
-  font-size: 48px;
+  font-size: 60px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 2.5;
   color: #000000;
 }
 
 .planning-container {
   width: 75%;
-  height: 420px;
+  height: 550px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -108,7 +110,7 @@ section {
 }
 
 .image-planning {
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -118,8 +120,8 @@ section {
 
 .image-planning img {
   display: block;
-  width: 500px;
-  height: 300px;
+  width: 450px;
+  height: 250px;
 }
 
 .right-section {
@@ -146,8 +148,8 @@ section {
 }
 
 .listed-container {
-  width: 75%;
-  height: 420px;
+  width: 65%;
+  height: 550px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -158,7 +160,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 600px;
+  max-width: 550px;
   font-size: 58px;
   font-weight: bold;
   text-align: left;
@@ -166,7 +168,7 @@ section {
 }
 
 .listed-image {
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -176,11 +178,12 @@ section {
 
 .listed-image img {
   display: block;
-  width: 500px;
-  height: 300px;
+  width: 450px;
+  height: 250px;
 }
 
 .text-section p {
+  width: 70%;
   font-size: 25px;
   line-height: 1.5;
   color: #000000;
@@ -190,7 +193,7 @@ section {
 
 .residential-container {
   width: 75%;
-  height: 420px;
+  height: 550px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -198,7 +201,7 @@ section {
 }
 
 .image-residential {
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -208,8 +211,8 @@ section {
 
 .image-residential img {
   display: block;
-  width: 500px;
-  height: 300px;
+  width: 450px;
+  height: 250px;
 }
 
 .residential-section {
@@ -236,7 +239,7 @@ section {
 }
 .interiors-container {
   width: 75%;
-  height: 420px;
+  height: 550px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -247,7 +250,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 600px;
+  max-width: 500px;
   flex: 1;
   font-size: 58px;
   font-weight: bold;
@@ -265,7 +268,7 @@ section {
 }
 
 .interiors-image {
-  width: 50%;
+  width: 40%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -275,7 +278,7 @@ section {
 
 .interiors-image img {
   display: block;
-  width: 500px;
-  height: 300px;
+  width: 450px;
+  height: 250px;
 }
 </style>

@@ -1,4 +1,7 @@
-<template>
+  flex: none;
+  background-color: black;
+  height: 5px;
+  width: 200px;<template>
   <section>
     <div class="people-contact-container">
       <div class="people-contact-line"></div>
@@ -53,19 +56,19 @@
   justify-content: flex-start;
   flex-direction: row;
   align-items: center;
-  height: 30vh;
+  height: 60vh;
 }
 
 .people-contact-line {
   flex: none;
   background-color: black;
   height: 5px;
-  width: 100px;
+  width: 200px;
 }
 .people-contact {
-  font-size: 48px;
+  font-size: 60px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 2.5;
   color: #000000;
 }
 
@@ -86,10 +89,11 @@
 }
 
 .intro h3 {
-  max-width: 50%;
-  font-size: 30px;
+  max-width: 60%;
+  font-size: 40px;
   line-height: 1.5;
   color: #000000;
+  font-weight:400;
 }
 
 .image-container-top {
@@ -108,7 +112,7 @@
 }
 
 .image-container {
-  width: 86%;
+  width: 100%;
   height: 45vh;
   display: flex;
   justify-content: space-evenly;
@@ -117,7 +121,7 @@
 }
 
 .text {
-  max-width: 40%;
+  max-width: 50%;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -126,14 +130,14 @@
 }
 
 .text p {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 1.5;
   color: #000000;
 }
 
 .image-container-bottom {
-  width: 50%;
+  width: 60%;
   height: 90%;
   display: flex;
   justify-content: space-between;
@@ -142,7 +146,7 @@
 }
 
 img {
-  height: 100%;
+  height: 120%;
   width: 70%;
   display: block;
 }
