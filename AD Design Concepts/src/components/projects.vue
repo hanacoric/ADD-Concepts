@@ -1,10 +1,12 @@
 <template>
   <section classs="project-root">
     <div class="projects-container">
+      <div class="project-box">
       <div class="projects-line"></div>
       <div class="projects">
         <h1>PROJECTS</h1>
       </div>
+    </div>
     </div>
 
     <div class="projects-pictures" >
@@ -155,8 +157,8 @@
       <div class="text">
         <p>
           Over the years AD Designs has helped numerous clients to secure
-          relevant permissions (Planning Permissions, Permitted Development
-          Certificates, Freeholder Licences etc.) and to execute alterations,
+          relevant permissions like: Planning Permissions, Permitted Development
+          Certificates, Freeholder Licences etc. and to execute alterations,
           extensions and improvements to their properties. These projects
           included loft and garage conversions, remodelling, extensions,
           outbuildings etc. We also assisted many clients in refurbishing their
@@ -294,7 +296,7 @@ img:not(:hover) {
 }
 
 .project-root{
-  height: 350vh;
+  height: 500vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -305,13 +307,21 @@ img:not(:hover) {
 .projects-container {
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 200px;
+}
+
+.project-box {
+  width:50%;
+ display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
 }
 
 .projects-line {
   flex: none;
   background-color: black;
-  height: 5px;
+  height: 7px;
   width: 200px;
   animation: slideInLeftToRight 2s forwards;
 }
@@ -320,7 +330,9 @@ img:not(:hover) {
   font-weight: bold;
   line-height: 2.5;
   color: #000000;
+  font-family: "soliden-Bold";
   animation: slideInLeftToRight 1s forwards;
+  ;
 }
 
 .projects-pictures {
@@ -328,14 +340,14 @@ img:not(:hover) {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .row {
   width: 85vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50vh;
+  height: 60vh;
 }
 .row > div {
   flex-basis: 45%;
@@ -347,22 +359,23 @@ img:not(:hover) {
   margin: 0 auto;
   width: 150%;
   height: auto;
-  max-width: 400px;
+  max-width: 350px;
   display: block;
 }
 
 .row p {
-  color: #333;
+  color: #000000;
   font-size: 20px;
   margin-top: 20px;
   justify-content: center;
+  font-family: "Mundial";
 }
 .row-two {
   width: 85vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50vh;
+  height: 60vh;
 }
 
 .row-two > div {
@@ -374,16 +387,17 @@ img:not(:hover) {
   margin: 0 auto;
   width: 150%;
   height: auto;
-  max-width: 400px;
+  max-width: 350px;
   display: block;
 }
 
 .row-two p {
-  color: #333;
+  color: #000000;
   font-size: 20px;
   margin-top: 20px;
   justify-content: center;
   text-align: center;
+  font-family: "Mundial";
 }
 
 .row-three {
@@ -391,7 +405,7 @@ img:not(:hover) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50vh;
+  height: 60vh;
 }
 
 .row-three > div {
@@ -404,15 +418,16 @@ img:not(:hover) {
   margin: 0 auto;
   width: 150%;
   height: auto;
-  max-width: 400px;
+  max-width: 350px;
   display: block;
 }
 
 .row-three p {
-  color: #333;
+  color: #000000;
   font-size: 20px;
   margin-top: 20px;
   justify-content: left;
+  font-family: "Mundial";
 }
 
 .row-four {
@@ -420,7 +435,7 @@ img:not(:hover) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50vh;
+  height: 60vh;
 }
 
 .row-four > div {
@@ -433,15 +448,16 @@ img:not(:hover) {
   margin: 0 auto;
   width: 150%;
   height: auto;
-  max-width: 400px;
+  max-width: 350px;
   display: block;
 }
 
 .row-four p {
-  color: #333;
+  color: #000000;
   font-size: 20px;
   margin-top: 20px;
   justify-content: left;
+  font-family: "Mundial";
 }
 
 .row-five {
@@ -449,7 +465,7 @@ img:not(:hover) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50vh;
+  height: 60vh;
 }
 
 .row-five > div {
@@ -462,15 +478,16 @@ img:not(:hover) {
   margin: 0 auto;
   width: 150%;
   height: auto;
-  max-width: 400px;
+  max-width: 350px;
   display: block;
 }
 
 .row-five p {
-  color: #333;
+  color: #000000;
   font-size: 20px;
   margin-top: 20px;
   justify-content: left;
+  font-family: "Mundial";
 }
 
 .row-six {
@@ -478,7 +495,7 @@ img:not(:hover) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50vh;
+  height: 70vh;
 }
 
 .row-six > div {
@@ -496,10 +513,11 @@ img:not(:hover) {
 }
 
 .row-six p {
-  color: #333;
+  color: #000000;
   font-size: 20px;
   margin-top: 20px;
   justify-content: left;
+  font-family: "Mundial";
 }
 
 .text-container {
@@ -530,6 +548,7 @@ img:not(:hover) {
   font-weight: bold;
   line-height: 1;
   color: #000000;
+  font-family: "soliden-Bold";
 }
 
 .line {
@@ -540,7 +559,7 @@ img:not(:hover) {
 
 .text {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   width: 100%;
@@ -549,10 +568,11 @@ img:not(:hover) {
 }
 
 .text p {
-  width: 60%;
+  width: 65%;
   text-align: justify;
-  font-size: 28px;
-  color: #333;
+  font-size: 25px;
+  color: #000000;
+  font-family: "Mundial";
 }
 
 .blackandwhite {
@@ -613,7 +633,7 @@ img:not(:hover) {
 
   .projects-line {
     height: 2px;
-    width: 100px;
+    width: 80px;
   }
   .projects {
     font-size: 30px; 
@@ -660,7 +680,7 @@ img:not(:hover) {
   }
 
   .domestic-projects h2 {
-    font-size: 24px; /* Adjust font size for readability */
+    font-size: 22px; /* Adjust font size for readability */
     line-height: 1.5; /* Adjust line height for readability */
     margin-bottom: 20px;
   }

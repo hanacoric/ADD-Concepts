@@ -1,9 +1,11 @@
 <template>
   <section class="aboutus-root">
     <div class="aboutus-container">
+      <div class="aboutus-box">
       <div class="aboutus-line"></div>
       <div class="aboutus">
         <h1>ABOUT US</h1>
+      </div>
       </div>
     </div>
 
@@ -43,7 +45,7 @@
         inception to completion. Our particular area of expertise is planning
         advice and obtaining planning permissions. Over the years we have helped
         many of our clients to realize their aspirations, whether in creating
-        their dream homes or maximising the value of their sites / properties.
+        their dream homes or maximising the value of their sites or properties.
       </p>
     </div>
     <div class="left-text-below">
@@ -52,7 +54,7 @@
         technical expertise in production of tender packages and construction
         drawings. We work closely with Local Planning Authorities, Building
         Control and other regulatory bodies to obtain the necessary permission.
-        When required we act as Contract Administrator and / or clients’ agent
+        When required we act as Contract Administrator or clients’ agent
         during the construction process.
       </p>
     </div>
@@ -118,9 +120,22 @@ export default {
     });
   }
 }
+
+
 </script>
 
 <style scoped>
+@keyframes slideInLeftToRight{
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
 @keyframes loadText {
   0% {
     opacity: 0;
@@ -139,8 +154,8 @@ h3 {
 }
 
 .aboutus-root {
-  height: 320vh;
-  width: 98.6%;
+  height: 400vh;
+  width: 100%;  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -152,19 +167,31 @@ h3 {
   flex-direction: row;
   align-items: center;
   width: 100%;
+  
+}
+
+.aboutus-box {
+ width:50%;
+ display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
 }
 
 .aboutus-line {
   flex: none;
   background-color: black;
-  height: 5px;
-  width: 200px;
+  height: 7px;
+  width: 190px;
+  animation: slideInLeftToRight 2s forwards;
 }
 .aboutus {
   font-size: 60px;
   font-weight: bold;
   line-height: 2.5;
   color: #000000;
+  font-family: "Soliden-Bold";
+  animation: slideInLeftToRight 1s forwards;
 }
 
 .right-text {
@@ -172,10 +199,11 @@ h3 {
   justify-content: flex-end;
   width: 80%;
   text-align: right;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: bolder;
   line-height: 1;
   color: #000000;
+  font-family: "Mundial";
 }
 
 .right-text h3 {
@@ -191,6 +219,7 @@ h3 {
   font-size: 38px;
  line-height: 1.2;
   color: #000000;
+  font-family: "Mundial";
 }
 
 .left-text p {
@@ -230,12 +259,14 @@ img {
   background-color: black;
   height: 3px;
   width: 60%;
+
 }
 
 .line-bottom {
   background-color: black;
   height: 3px;
   width: 40%;
+ 
 }
 
 .right-text-below {
@@ -243,9 +274,10 @@ img {
   justify-content: flex-end;
   text-align: right;
   width: 80%;
-  font-size: 38px;
+  font-size: 35px;
   line-height: 1.3;
   color: #000000;
+  font-family: "Mundial";
 }
 
 .right-text-below p,
@@ -259,10 +291,11 @@ img {
   text-align: justify;
   width: 80%;
   text-align: right;
-  font-size: 38px;
+  font-size: 35px;
   font-weight: bold;
   line-height: 1.3;
   color: #000000;
+  font-family: "Mundial";
 }
 
 .inView {
@@ -274,19 +307,22 @@ img {
 }
 
 
+
 @media (max-width: 768px) {
   .aboutus-root{
-    height: 90vh;
+    height: 215vh;
   }
 
   .aboutus-container {
     margin-bottom: 50px;
+
   }
 
   .aboutus h1 {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 1.5;
     font-weight: bold;
+  
     
   }
 
@@ -342,7 +378,7 @@ img {
     line-height: 1.5;
     width: 80%;
     text-align: justify;
-    margin-bottom: 50px;
+
   }
 
   .line-top,

@@ -5,7 +5,7 @@
     <div class="services-wrapper"><a href="/services" class="services">services</a>
       <div class="underline"></div>
     </div>
-    <div class="people-wrapper"><a href="/peopleandcontact" class="people">people & contact</a>
+    <div class="people-wrapper"><a href="/contact" class="contact">contact</a>
       <div class="underline"></div>
     </div>
   </nav>
@@ -17,7 +17,7 @@ function modifyNavbar() {
   const allLinks = {
     "/aboutus": "about us",
     "/services": "services",
-    "/peopleandcontact": "people & contact",
+    "/contact": "contact",
     "/projects": "projects",
   };
 
@@ -105,6 +105,7 @@ nav a {
   color: black;
   text-decoration: none;
   font-size: 40px;
+  font-family: "Mundial";
 }
 
 .nav-links div {

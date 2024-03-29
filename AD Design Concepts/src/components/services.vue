@@ -2,34 +2,40 @@
   <section>
     <div class="services-container-wrapper">
       <div class="services-container">
+        <div class="services-box">
         <div class="services-line"></div>
         <div class="services">
           <h1 class="dontFadeIn">SERVICES</h1>
         </div>
       </div>
+      </div>
     </div>
    
 
     <div class="planning-container">
-      <div class="right-section">
-        <h1 class="planning-header">Planning</h1>
-        <p class="planning-text">
-          Our particular area of expertise is planning advice and obtaining
-          planning permissions. We work closely with Local Planning Authorities,
-          Building Control and other regulatory bodies to obtain the necessary
-          permissions.
-        </p>
-      </div>
-      <div class="image-planning">
-        <img src="../assets/images/image19.jpg" alt="Planning" />
-      </div>
-    </div>
+  <div class="image-planning">
+    <img src="../assets/images/image19.jpg" alt="Planning" />
+  </div>
+  <div class="right-section">
+    <div class="planning-box">
+    <h1 class="planning-header">Planning</h1>
+  </div>
+    <p class="planning-text">
+      Our particular area of expertise is planning advice and obtaining
+      planning permissions. We work closely with Local Planning Authorities,
+      Building Control and other regulatory bodies to obtain the necessary
+      permissions
+    </p>
+  </div>
+</div>
+
+  
     <div class="listed-container">
       <div class="text-section">
-        <h1>Listed Buildings &<br />Conservation Areas</h1>
+        <h1>& Listed Buildings<br />Conservation Areas</h1>
         <p>
           We have a wealth of experience working on Listed Buildings and
-          buildings in Conservation areas.
+          buildings in Conservation areas
         </p>
       </div>
       <div class="listed-image">
@@ -42,7 +48,7 @@
         <h1 class="residential-header">Residential</h1>
         <p class="residential-text">
           Our work stretches from domestic extensions and conversion, through
-          new build houses to large new blocks of flats..
+          new build houses to large new blocks of flats
         </p>
       </div>
       <div class="image-residential">
@@ -50,16 +56,17 @@
       </div>
     </div>
     <div class="interiors-container">
+      <div class="interiors-image">
+        <img src="../assets/images/image12.jpg" alt="Interiors" />
+      </div>
       <div class="interiors-section">
         <h1>Interiors</h1>
         <p>
           We have a wealth of experience working on Listed Buildings and
-          buildings in Conservation areas.
+          buildings in Conservation areas
         </p>
       </div>
-      <div class="interiors-image">
-        <img src="../assets/images/image12.jpg" alt="Interiors" />
-      </div>
+      
     </div>
   </section>
 </template>
@@ -126,6 +133,16 @@ export default {
 </script>
 
 <style scoped>
+@keyframes slideInLeftToRight{
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 @keyframes loadText {
   0% {
     opacity: 0;
@@ -135,8 +152,8 @@ export default {
   }
 }
 section {
-  height: 240vh;
-  width: 98.6%;
+  height: 300vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -151,14 +168,26 @@ section {
 
 .services-container {
   display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.services-box {
+  width:50%;
+ display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
 }
 
 .services-line {
   flex: none;
   background-color: black;
-  height: 5px;
+  height: 7px;
   width: 200px;
+  animation: slideInLeftToRight 2s forwards;
  }
 
 .services {
@@ -166,30 +195,39 @@ section {
   font-weight: bold;
   line-height: 2.5;
   color: #000000;
+  font-family: "Soliden-Bold";
+  animation: slideInLeftToRight 1s forwards;
 }
 
 .planning-container {
-  width: 75%;
+  width: 68%;
   height: 550px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
-  margin-top: 100px;
 }
 
 .right-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-end;
+}
+
+.planning-box {
+width:80%;
+display: flex;
+justify-content: flex-start;
+
 }
 
 .planning-header {
   font-size: 58px;
   font-weight: bold;
-  text-align: right;
   color: #000000;
+  order: 1; /* Ensures the header is placed above the paragraph */
+  direction: rtl;
+  font-family: "Soliden-Bold";
 }
 
 .planning-text {
@@ -197,8 +235,12 @@ section {
   line-height: 1.5;
   color: #000000;
   text-align: right;
-  margin-top: 20px;
-  max-width: 600px;
+  margin-top: 10px;
+  text-align: justify;
+  direction: ltr;
+  width:80%;
+  order: 2; /* Ensures the paragraph is placed below the header */
+  font-family: "Mundial";
 }
 
 .image-planning {
@@ -218,23 +260,26 @@ section {
 
 
 .listed-container {
-  width: 65%;
+  width: 70%;
   height: 550px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+
 }
 
 .text-section h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 550px;
-  font-size: 58px;
+  max-width: 480px;
+  font-size: 48px;
   font-weight: bold;
-  text-align: left;
+  text-align: right;
   color: #000000;
+  direction: rtl;
+  font-family: "Soliden-Bold";
 }
 
 .listed-image {
@@ -253,16 +298,18 @@ section {
 }
 
 .text-section p {
-  width: 70%;
+  width: 82%;
   font-size: 25px;
   line-height: 1.5;
   color: #000000;
-  text-align: left;
+  text-align: right;
   margin-top: 20px;
+  padding-left: 30px;
+
 }
 
 .residential-container {
-  width: 75%;
+  width: 85%;
   height: 550px;
   display: flex;
   justify-content: space-evenly;
@@ -271,7 +318,7 @@ section {
 }
 
 .image-residential {
-  width: 40%;
+  width: 27%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -297,15 +344,18 @@ section {
   font-weight: bold;
   text-align: right;
   color: #000000;
+  font-family: "Soliden-Bold";
 }
 
 .residential-text {
   font-size: 24px;
   line-height: 1.5;
   color: #000000;
-  text-align: right;
+direction: rtl;
   margin-top: 20px;
   max-width: 450px;
+  text-align: justify;
+  font-family: "Mundial";
 }
 .interiors-container {
   width: 75%;
@@ -494,6 +544,8 @@ section {
   .interiors-container {
     flex-direction: column;
     height: 75%;
+    width: 200%;
+
     
   }
 

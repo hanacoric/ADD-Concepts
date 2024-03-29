@@ -14,7 +14,7 @@
         <div class="line"></div>
       </div>
       <div class="wrapper">
-        <a href="peopleandcontact">people & contact</a>
+        <a href="contact">contact</a>
         <div class="line"></div>
       </div>
     </div>
@@ -37,7 +37,7 @@
           stroke-linejoin="round"
         />
       </svg>
-      <!-- Close Icon, initially hidden -->
+
       <svg
         class="icon-close"
         xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@
             </text>
             <text
               id="CONCEPTS"
-              transform="translate(895.008 666.7)"
+              transform="translate(885.008 666.7)"
               fill="none"
               stroke="#efece9"
               stroke-width="3"
@@ -110,7 +110,7 @@
             </text>
             <text
               id="AD"
-              transform="translate(554.833 671)"
+              transform="translate(580.833 671)"
               fill="none"
               stroke="#efece9"
               stroke-width="4"
@@ -207,7 +207,7 @@ function toggleMenuIcons() {
 
 function switchImage(reverseOrder = false) {
   let mainSection = document.querySelector(".main-section");
-  //Jakvo ovde stavis slike za slideshow
+
   let image1 = "src/assets/images/Image05.jpg";
   let image2 = "src/assets/images/backdrop2.jpg";
   let image3 = "src/assets/images/backdrop3.jpg";
@@ -319,8 +319,8 @@ function switchImage(reverseOrder = false) {
 
 .arrow-left,
 .arrow-right {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -358,7 +358,7 @@ text{
 }
 
 .nav-content {
-  height: 50vh;
+  height: 60vh;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -372,24 +372,31 @@ text{
 .nav-content a {
   color: #fff;
   text-decoration: none;
-  font-size: 4.5rem;
+  font-size: 3.5rem;
+  font-family: "Mundial";
+
 }
 
 .nav-content .line {
-  margin-top: 60px;
-  width: 100px;
+  margin-top: 45px;
+  width: 150px;
   height: 5px;
   background-color: #fff;
 }
 
+.line {
+  margin-top: 60px;
+}
+
 .nav-content .wrapper {
-  width: 450px;
+  width: 430px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
 }
+
 
 .nav-content.animate{
   animation: slideInRightToLeft 0.5s forwards;
