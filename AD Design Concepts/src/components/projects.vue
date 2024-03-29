@@ -184,9 +184,75 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+export default {
+  mounted() {
+    const allParagraphs = document.querySelectorAll('p');
+    const allHeadings = document.querySelectorAll('h3, h2');
+
+    allParagraphs.forEach((paragraph) => {
+      if (!paragraph.classList.contains('dontFadeIn')) {
+        paragraph.classList.add('primedForAnimation');
+      }
+    });
+
+    allHeadings.forEach((heading) => {
+      if (!heading.classList.contains('dontFadeIn')) {
+        heading.classList.add('primedForAnimation');
+      }
+    });
+
+    // Create a new Intersection Observer instance
+    const observer = new IntersectionObserver((entries) => {
+      // Loop over the entries
+      entries.forEach(entry => {
+        // If the element is fully in view
+        if (entry.intersectionRatio === 1 && !entry.target.classList.contains('inView')) {
+
+          entry.target.classList.add('inView');
+        }
+      });
+    }, {
+      threshold: 1.0 // Trigger the callback when the element is fully in view
+    });
+
+    // Start observing the right-text-below element
+    allParagraphs.forEach((paragraph) => {
+      if (!paragraph.classList.contains('dontFadeIn')) {
+        observer.observe(paragraph);
+      }
+    });
+
+    allHeadings.forEach((heading) => {
+      if (!heading.classList.contains('dontFadeIn')) {
+        observer.observe(heading);
+      }
+    });
+  }
+}
+
 </script>
 
 <style scoped>
+@keyframes slideInLeftToRight{
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes loadText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 @keyframes growAndRemoveFilter {
   0% {
@@ -247,12 +313,14 @@ img:not(:hover) {
   background-color: black;
   height: 5px;
   width: 200px;
+  animation: slideInLeftToRight 2s forwards;
 }
 .projects {
   font-size: 60px;
   font-weight: bold;
   line-height: 2.5;
   color: #000000;
+  animation: slideInLeftToRight 1s forwards;
 }
 
 .projects-pictures {
@@ -489,6 +557,14 @@ img:not(:hover) {
 
 .blackandwhite {
   filter: grayscale(100%);
+}
+
+.inView {
+  animation: loadText 1s forwards;
+}
+
+.primedForAnimation {
+  opacity: 0;
 }
 
 

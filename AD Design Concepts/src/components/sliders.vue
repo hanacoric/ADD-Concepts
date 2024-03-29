@@ -144,9 +144,32 @@
 <script>
 document.addEventListener("DOMContentLoaded", (event) => {
   const hamburgerMenu = document.getElementById("hamburger-id");
+  const arrowLeft = document.querySelector(".arrow-left");
+  const arrowRight = document.querySelector(".arrow-right");
+  let timerId;
+
   if (hamburgerMenu) {
     hamburgerMenu.addEventListener("click", toggleMenuIcons);
   }
+  timerId = setInterval(() => {
+    switchImage(false);
+  }, 5000);
+
+  arrowLeft.addEventListener("click", () => {
+    clearInterval(timerId);
+    switchImage(true);
+    timerId = setInterval(() => {
+      switchImage(true);
+    }, 5000);
+  });
+
+  arrowRight.addEventListener("click", () => {
+    clearInterval(timerId);
+    switchImage(false);
+    timerId = setInterval(() => {
+      switchImage(false);
+    }, 5000);
+
 });
 
 function toggleMenuIcons() {
@@ -181,6 +204,39 @@ function toggleMenuIcons() {
     navContent.classList.add("animate");
   }
 }
+
+function switchImage(reverseOrder = false) {
+  let mainSection = document.querySelector(".main-section");
+  //Jakvo ovde stavis slike za slideshow
+  let image1 = "src/assets/images/Image05.jpg";
+  let image2 = "src/assets/images/backdrop2.jpg";
+  let image3 = "src/assets/images/backdrop3.jpg";
+
+  // Get the backgroundImage of the mainSection
+  let currentImage = mainSection.style.backgroundImage;
+
+  // Remove url(, ), and quotes from the currentImage string
+  currentImage = currentImage.slice(5, -2);
+
+  if (reverseOrder) {
+    if (currentImage === image1) {
+      mainSection.style.backgroundImage = `url(${image3})`;
+    } else if (currentImage === image3) {
+      mainSection.style.backgroundImage = `url(${image2})`;
+    } else {
+      mainSection.style.backgroundImage = `url(${image1})`;
+    }
+  } else {
+    if (currentImage === image1) {
+      mainSection.style.backgroundImage = `url(${image2})`;
+    } else if (currentImage === image2) {
+      mainSection.style.backgroundImage = `url(${image3})`;
+    } else {
+      mainSection.style.backgroundImage = `url(${image1})`;
+    }
+  }
+}
+});
 </script>
 
 <style scoped>
@@ -207,6 +263,14 @@ function toggleMenuIcons() {
   }
 }
 
+@keyframes slideOnHover {
+  0% {
+    transform: translateX(0);
+  }  100% {
+    transform: translateX(-30px);
+  }
+  
+}
 
 .main-section {
   width: 100vw;
@@ -271,6 +335,10 @@ function toggleMenuIcons() {
   align-items: center;
 }
 
+text{
+  font-family: "Soliden-Bold";
+}
+
 .main-section::before {
   content: ""; /* Required for pseudo-elements */
   position: absolute; /* Position relative to the main-section */
@@ -315,7 +383,7 @@ function toggleMenuIcons() {
 }
 
 .nav-content .wrapper {
-  width: 400px;
+  width: 450px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -335,6 +403,10 @@ function toggleMenuIcons() {
   pointer-events: none;
   cursor: not-allowed;
   opacity: 0;
+}
+
+.wrapper a:hover {
+  animation: slideOnHover 0.5s forwards;
 }
 
 @media (max-width: 768px) {

@@ -34,6 +34,15 @@ import KensingtonChurch from "./views/Projects/KensingtonChurch.vue";
 </template>
 
 <style scoped>
+@font-face {
+  font-family: "Soliden";
+  src: url("./assets/fonts/SolidenTrial-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Soliden-Bold";
+  src: url("./assets/fonts/SolidenTrial-Bold.ttf") format("truetype");
+}
 #app {
   display: flex;
   justify-content: center;

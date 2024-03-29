@@ -4,10 +4,11 @@
       <div class="services-container">
         <div class="services-line"></div>
         <div class="services">
-          <h1>SERVICES</h1>
+          <h1 class="dontFadeIn">SERVICES</h1>
         </div>
       </div>
     </div>
+   
 
     <div class="planning-container">
       <div class="right-section">
@@ -63,9 +64,76 @@
   </section>
 </template>
 
-<script></script>
+<script>
+export default {
+  mounted() {
+    const allParagraphs = document.querySelectorAll('p');
+    const allImages = document.querySelectorAll('img');
+    const allHeadings = document.querySelectorAll('h3, h1, h2');
+
+    allParagraphs.forEach((paragraph) => {
+      if (!paragraph.classList.contains('dontFadeIn')) {
+        paragraph.classList.add('primedForAnimation');
+      }
+    });
+
+    allImages.forEach((image) => {
+      if (!image.classList.contains('dontFadeIn')) {
+        image.classList.add('primedForAnimation');
+      }
+    });
+
+    allHeadings.forEach((heading) => {
+      if (!heading.classList.contains('dontFadeIn')) {
+        heading.classList.add('primedForAnimation');
+      }
+    });
+
+    // Create a new Intersection Observer instance
+    const observer = new IntersectionObserver((entries) => {
+      // Loop over the entries
+      entries.forEach(entry => {
+        // If the element is fully in view
+        if (entry.intersectionRatio === 1 && !entry.target.classList.contains('inView')) {
+
+          entry.target.classList.add('inView');
+        }
+      });
+    }, {
+      threshold: 1.0 // Trigger the callback when the element is fully in view
+    });
+
+    // Start observing the right-text-below element
+    allParagraphs.forEach((paragraph) => {
+      if (!paragraph.classList.contains('dontFadeIn')) {
+        observer.observe(paragraph);
+      }
+    });
+
+    allImages.forEach((image) => {
+      if (!image.classList.contains('dontFadeIn')) {
+        observer.observe(image);
+      }
+    });
+
+    allHeadings.forEach((heading) => {
+      if (!heading.classList.contains('dontFadeIn')) {
+        observer.observe(heading);
+      }
+    });
+  }
+}
+</script>
 
 <style scoped>
+@keyframes loadText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 section {
   height: 240vh;
   width: 98.6%;
@@ -282,6 +350,13 @@ section {
   display: block;
   width: 450px;
   height: 250px;
+}
+.inView {
+  animation: loadText 1s forwards;
+}
+
+.primedForAnimation {
+  opacity: 0;
 }
 
 @media (max-width: 768px) {

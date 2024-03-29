@@ -1,8 +1,13 @@
 <template>
   <nav class="nav-links">
-    <a href="/aboutus" class="aboutus">about us</a>
-    <a href="/services" class="services">services</a>
-    <a href="/peopleandcontact" class="people">people & contact</a>
+    <div class="about-wrapper"><a href="/aboutus" class="aboutus">about us</a>
+    <div class="underline"></div></div>
+    <div class="services-wrapper"><a href="/services" class="services">services</a>
+      <div class="underline"></div>
+    </div>
+    <div class="people-wrapper"><a href="/peopleandcontact" class="people">people & contact</a>
+      <div class="underline"></div>
+    </div>
   </nav>
 </template>
 
@@ -41,6 +46,29 @@ function modifyNavbar() {
       }
     });
   }
+
+animateNavbar();
+}
+
+function animateNavbar() {
+  const navLinks = Array.from(document.querySelectorAll(".nav-links div"));
+  navLinks.forEach((link) => {
+
+    let underline = link.querySelector(`${link.className}, .underline`);
+
+    link.addEventListener("mouseover", () => {
+      if (underline.classList.contains("animate-underline-reverse")) {
+        underline.classList.remove("animate-underline-reverse");
+      }
+      underline.classList.add("animate-underline");
+    });
+
+    link.addEventListener("mouseout", () => {
+      underline.classList.remove("animate-underline");
+      underline.classList.add("animate-underline-reverse");
+    });
+
+  });
 }
 
 // Call the function when the window loads
@@ -48,6 +76,23 @@ window.onload = modifyNavbar;
 </script>
 
 <style scoped>
+@keyframes expandUnderline {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes closeUnderline {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -61,6 +106,27 @@ nav a {
   text-decoration: none;
   font-size: 40px;
 }
+
+.nav-links div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.underline {
+  height: 2px;
+  background-color: black;
+}
+
+.animate-underline{
+  animation: expandUnderline 0.5s forwards;
+}
+
+.animate-underline-reverse{
+  animation: closeUnderline 0.5s forwards;
+}
+
 
 /*@media (max-width: 768px) {
   nav {
