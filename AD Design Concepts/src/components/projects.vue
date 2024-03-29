@@ -584,7 +584,7 @@ img:not(:hover) {
   }
 
   .domestic-projects h2 {
-    font-size: 26px; /* Adjust font size for readability */
+    font-size: 24px; /* Adjust font size for readability */
     line-height: 1.5; /* Adjust line height for readability */
     margin-bottom: 20px;
   }
@@ -603,7 +603,7 @@ img:not(:hover) {
   }
 
   .text p {
-    font-size: 18px; /* Adjust font size for readability */
+    font-size: 16px; /* Adjust font size for readability */
     width: 70%; /* Full width for text */
     text-align: justify; /* Justify text for readability */
 

@@ -128,4 +128,59 @@
         width: 60vw;
         height: 80vh;
     }
+    @media (max-width: 768px) {
+  .section-wrapper {
+    height: auto; /* Height should adjust to content */
+    
+  }
+
+  .container {
+    justify-content: center; /* Center the container contents */
+    height: auto; /* Adjust height to content */
+    margin: 0; /* Remove any margin if present */
+  }
+
+  .Ravenscroft-Avenue {
+    margin-left: 0; /* Remove margin-left */
+    text-align: center; /* Center the title text */
+    margin-bottom: 50px;
+  }
+
+  .Ravenscroft-Avenue h1{
+    font-size: 28px; /* Reduce font size for smaller screens */
+    font-weight: bold; /* Keep the font weight */
+  }
+  .text-container,
+  .text-container-top,
+  .text-container-bottom,
+  .bottom-line-container {
+    width: 90%; /* Reduce the width to provide padding on the sides */
+    margin: 0 auto; /* Center the containers */
+  }
+
+  .text-container-bottom p {
+    font-size: 15px; /* Reduce the font size for readability */
+    width: 100%; /* Make paragraph take full width */
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+
+  .line-top,
+  .line-bottom {
+    display: none; /* Hide the lines */
+  }
+
+  .image-container {
+    width: 80%; /* Full width to fit the screen */
+    height: auto; /* Height should adjust to the content */
+    padding: 20px 0; /* Add padding above and below the image */
+  }
+
+  .image,
+  .image img {
+    width: 100%; /* Images should take full width of the screen */
+    height: auto; /* Adjust height automatically */
+    max-height: 50vh; /* Limit the maximum height of the image */
+  }
+}
 </style>

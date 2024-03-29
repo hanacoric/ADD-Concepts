@@ -194,6 +194,55 @@
     justify-content: left;
 }
 
+@media (max-width: 768px) {
+    .listed-container {
+    margin-bottom: 50px;
+  }
+
+    .listed {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-right:150px;
+    }
+  .listed h1 {
+    font-size: 28px;
+    line-height: 1.5;
+    font-weight: bold;
+    
+  }
+
+  
+  .row, .row-two, .row-three, .row-four {
+    flex-direction: column;
+    align-items: center; 
+    height: auto;
+  }
+
+
+  .row > div, .row-two > div, .row-three > div, .row-four {
+    width: 100%; 
+    flex-basis: auto;
+  }
+
+  .row img, .row-two img, .row-three img, .row-four img {
+    width: 80%; /* Make images full width */
+    max-width: none; /* Remove max width restriction */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add space below the image */
+    
+  }
+
+  /* Adjust paragraph styles inside rows */
+  .row p, .row-two p, .row-three p, .row-four p {
+    font-size: 18px; /* Adjust font size for readability */
+    margin-top: 10px; /* Reduce space above the paragraph */
+    text-align: center; /* Center align the text */
+    margin-bottom: 50px; /* Add space below the paragraph */
+  }
+}
+
 
 
 

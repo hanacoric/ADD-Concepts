@@ -63,10 +63,13 @@
 
     @media (max-width: 768px) {
         .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: space-evenly;
             padding-bottom: 0;
             height:10vh;
-            margin-top: 100px;
+            margin-top: 50px;
             margin-bottom: 50px;
         }
 
@@ -79,6 +82,7 @@
         }
         .centered-line {
             width: 40vw;
+            height: 0.2vh;
         }
 
         .info {

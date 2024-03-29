@@ -10,9 +10,6 @@
     </div>
 
     <div class="planning-container">
-      <div class="image-planning">
-        <img src="../assets/images/image19.jpg" alt="Planning" />
-      </div>
       <div class="right-section">
         <h1 class="planning-header">Planning</h1>
         <p class="planning-text">
@@ -21,6 +18,9 @@
           Building Control and other regulatory bodies to obtain the necessary
           permissions.
         </p>
+      </div>
+      <div class="image-planning">
+        <img src="../assets/images/image19.jpg" alt="Planning" />
       </div>
     </div>
     <div class="listed-container">
@@ -36,15 +36,16 @@
       </div>
     </div>
     <div class="residential-container">
-      <div class="image-residential">
-        <img src="../assets/images/image08.jpg" alt="Residential" />
-      </div>
+      
       <div class="residential-section">
         <h1 class="residential-header">Residential</h1>
         <p class="residential-text">
           Our work stretches from domestic extensions and conversion, through
           new build houses to large new blocks of flats..
         </p>
+      </div>
+      <div class="image-residential">
+        <img src="../assets/images/image08.jpg" alt="Residential" />
       </div>
     </div>
     <div class="interiors-container">
@@ -109,21 +110,6 @@ section {
   margin-top: 100px;
 }
 
-.image-planning {
-  width: 40%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.image-planning img {
-  display: block;
-  width: 450px;
-  height: 250px;
-}
-
 .right-section {
   display: flex;
   flex-direction: column;
@@ -146,6 +132,22 @@ section {
   margin-top: 20px;
   max-width: 600px;
 }
+
+.image-planning {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image-planning img {
+  display: block;
+  width: 450px;
+  height: 250px;
+}
+
 
 .listed-container {
   width: 65%;
@@ -280,5 +282,168 @@ section {
   display: block;
   width: 450px;
   height: 250px;
+}
+
+@media (max-width: 768px) {
+  section {
+    height: 300vh;
+  }
+
+  .services {
+    font-size: 40px;
+  }
+
+  .services-container {
+    margin-bottom: 50px;
+  }
+
+  .services h1 {
+    font-size: 50px;
+    line-height: 1.5;
+    font-weight: bold;
+    
+  }
+
+  .services-line {
+    height: 2px;
+    width: 70px;
+  }
+
+  .planning-container {
+    flex-direction: column;
+    height: 100%;
+    margin-top: 50px;
+  }
+
+  .right-section {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .planning-header {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .planning-text {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    max-width: 90%;
+    margin-bottom: 50px;
+  }
+
+  .image-planning {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image-planning img {
+    width: 80%;
+    height: 60%;
+  }
+
+  .listed-container {
+    flex-direction: column;
+    height: 100%;
+    margin-top: 30px;
+  }
+
+  .text-section h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .listed-image {
+    width: 100%;
+    height: 50%;
+  }
+
+  .listed-image img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .text-section p {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    
+  }
+
+  .residential-container {
+    flex-direction: column;
+    height: 75%;
+    margin-top: 50px;
+  }
+
+  .image-residential {
+    width: 100%;
+    height: 50%;
+  }
+
+  .image-residential img {
+    width: 80%;
+    height: 60%;
+  }
+
+  .residential-section {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .residential-header {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .residential-text {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    max-width: 90%;
+  }
+
+  .interiors-container {
+    flex-direction: column;
+    height: 75%;
+    
+  }
+
+  .interiors-section h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .interiors-section p {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    max-width: 90%;
+  }
+
+
+  .interiors-image {
+    width: 100%;
+    height: 50%;
+  }
+
+  .interiors-image img {
+    width: 80%;
+    height: 60%;
+  }
+
 }
 </style>

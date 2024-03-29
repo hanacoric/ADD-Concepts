@@ -30,6 +30,7 @@
                 <p> Oakhill Avenue, Highgate </p>
             </div>
                  <img src="../assets/images/image23.jpg" alt="Ravenscroft Avenue, Golders Green">
+                 
                
                 </div>
     
@@ -92,9 +93,49 @@
 </template>
 
 <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+const imgElements = document.querySelectorAll('img');
+
+imgElements.forEach(img => {
+  img.classList.add('blackandwhite');
+
+  });
+});
+
 </script>
 
 <style scoped>
+@keyframes growAndRemoveFilter {
+  0% {
+    transform: scale(1);
+    filter: grayscale(100%);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+  }
+}
+
+@keyframes shrinkAndApplyFilter {
+  0% {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+  }
+  100% {
+    transform: scale(1);
+    filter: grayscale(100%);
+  }
+}
+
+@keyframes textSlide {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
 .planning-container {
     display: flex; 
     align-items: center; 
@@ -293,5 +334,53 @@
     font-size: 16px; 
     margin-top: 8px; 
     justify-content: left;
+}
+
+@media (max-width: 768px) {
+.planning-container {
+    margin-bottom: 50px;
+  }
+
+    .planning {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right:150px;
+    }
+  .planning h1 {
+    font-size: 50px;
+    line-height: 1.5;
+    font-weight: bold;
+    
+  }
+
+  
+  .row, .row-two, .row-three, .row-four, .row-five, .row-six {
+    flex-direction: column;
+    align-items: center; 
+    height: auto;
+  }
+
+
+  .row > div, .row-two > div, .row-three > div, .row-four > div, .row-five > div, .row-six > div {
+    width: 100%; 
+    flex-basis: auto;
+  }
+
+  .row img, .row-two img, .row-three img, .row-four img, .row-five img, .row-six img {
+    width: 80%; /* Make images full width */
+    max-width: none; /* Remove max width restriction */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add space below the image */
+    
+  }
+
+  /* Adjust paragraph styles inside rows */
+  .row p, .row-two p, .row-three p, .row-four p, .row-five p, .row-six p {
+    font-size: 18px; /* Adjust font size for readability */
+    margin-top: 10px; /* Reduce space above the paragraph */
+    text-align: center; /* Center align the text */
+    margin-bottom: 50px; /* Add space below the paragraph */
+  }
 }
 </style>

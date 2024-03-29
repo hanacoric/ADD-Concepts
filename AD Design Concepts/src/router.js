@@ -43,23 +43,23 @@ export default createRouter({
       component: Services,
     },
     {
-      path: "/planning",
+      path: "/services/planning",
       component: Planning,
     },
     {
-      path: "/listedbuildings",
+      path: "/services/listedbuildings",
       component: ListedBuildings,
     },
     {
-      path: "/residential",
+      path: "/services/residential",
       component: Residential,
     },
     {
-      path: "/interiors",
+      path: "/services/interiors",
       component: Interiors,
     },
     {
-      path: "/peopleandcontact",
+      path: "/services/peopleandcontact",
       component: PeopleContact,
     },
     {
@@ -119,7 +119,7 @@ export default createRouter({
       component: finchleyroad,
     },
     {
-      path: "/projects/ hollandpark",
+      path: "/projects/hollandpark",
       component: hollandpark,
     },
     {
