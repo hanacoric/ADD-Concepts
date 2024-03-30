@@ -6,7 +6,7 @@
     <div class="people-contact-container">
       <div class="people-contact-line"></div>
       <div class="people-contact">
-        <h1>PEOPLE & CONTACT</h1>
+        <h1> CONTACT</h1>
       </div>
     </div>
     <div class="info">

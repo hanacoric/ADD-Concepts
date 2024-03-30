@@ -2,7 +2,7 @@
     <section class="section-wrapper">
         <div class="container">
             <div class="Prince-Albert-Road">
-                <h1>  Prince Albert Road, <br> Regent’s Park  </h1>
+                <h1>  Prince Albert Road, Regent’s Park  </h1>
             </div>
         </div>
 
@@ -45,17 +45,16 @@
 .container {
     display: flex; 
     align-items: center; 
-    height: 100px;
+    height: 200px;
+    justify-content: flex-start; /* Aligns the child elements to the start of the container */
 }
 
 .Prince-Albert-Road {
-    font-size: 48px; 
+    font-size: 38px; 
     font-weight: bold; 
     line-height: 1; 
     color: #000000;
-    height: 10px;
-    margin-left:150px;
-
+    font-family: "Soliden-Bold";
 }
 
 .text-container {
@@ -64,7 +63,7 @@
     align-items: flex-start;
     flex-direction: column;
     width: 60%;
-    height: 20%;
+    height: 30%;
   }
 
   .text-container-top{
@@ -85,6 +84,7 @@
     text-align: justify;
     font-size:30px; 
     width: 50vw;
+    font-family: "Mundial";
     }
 
     .bottom-line-container{

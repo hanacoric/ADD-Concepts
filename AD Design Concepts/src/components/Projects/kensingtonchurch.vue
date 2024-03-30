@@ -37,23 +37,22 @@
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    height: 175vh;
+    height: 185vh;
 }
 
 .container {
     display: flex; 
     align-items: center; 
-    height: 100px;
+    height: 200px;
+    justify-content: flex-start; /* Aligns the child elements to the start of the container */
 }
 
 .Kensington-Church{
-    font-size: 48px; 
+    font-size: 38px; 
     font-weight: bold; 
     line-height: 1; 
     color: #000000;
-    height: 10px;
-    margin-left:150px;
-
+    font-family: "Soliden-Bold";
 }
 
 .text-container {
@@ -62,7 +61,7 @@
     align-items: flex-start;
     flex-direction: column;
     width: 60%;
-    height: 30%;
+    height: 40%;
   }
 
   .text-container-top{
@@ -83,6 +82,7 @@
     text-align: justify;
     font-size: 25px; 
     width: 50vw;
+    font-family:"Mundial";
     }
 
     .bottom-line-container{

@@ -43,17 +43,16 @@
 .container {
     display: flex; 
     align-items: center; 
-    height: 100px;
+    height: 200px;
+    justify-content: flex-start; /* Aligns the child elements to the start of the container */
 }
 
-.The-Avenue{
-    font-size: 48px; 
+.The-Avenue {
+    font-size: 38px; 
     font-weight: bold; 
     line-height: 1; 
     color: #000000;
-    height: 10px;
-    margin-left:150px;
-
+    font-family: "Soliden-Bold";
 }
 
 .text-container {
@@ -62,7 +61,7 @@
     align-items: flex-start;
     flex-direction: column;
     width: 60%;
-    height: 25%;
+    height: 30%;
   }
 
   .text-container-top{
@@ -83,6 +82,7 @@
     text-align: justify;
     font-size:30px; 
     width: 50vw;
+    font-family: "Mundial";
     }
 
     .bottom-line-container{

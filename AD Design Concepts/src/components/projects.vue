@@ -15,7 +15,7 @@
           <img src="../assets/images/image06.jpg" alt="Fortis Green" />
           <p>Fortis Green</p>
         </div>
-        <div class="Atrium-Gate-House">
+        <div class="Atrium-Gate-House"> 
           <img
             src="../assets/images/image07.jpg"
             alt="Atrium House, Gate House, Highgate"

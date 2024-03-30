@@ -6,7 +6,7 @@ import Planning from "./views/Planning.vue";
 import ListedBuildings from "./views/Listed-Buildings.vue";
 import Residential from "./views/Residential.vue";
 import Interiors from "./views/Interiors.vue";
-import PeopleContact from "./views/People&Contact.vue";
+import Contact from "./views/Contact.vue";
 import Projects from "./views/Projects.vue";
 import fortisgreen from "./views/Projects/FortisGreen.vue";
 import atriumhouse from "./views/Projects/AtriumHouse.vue";
@@ -59,8 +59,8 @@ export default createRouter({
       component: Interiors,
     },
     {
-      path: "/services/peopleandcontact",
-      component: PeopleContact,
+      path: "/services/contact",
+      component: Contact,
     },
     {
       path: "/projects",

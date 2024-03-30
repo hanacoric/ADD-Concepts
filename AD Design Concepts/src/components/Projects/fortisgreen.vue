@@ -29,7 +29,67 @@
     </section>
 </template>
 
-<script setup>
+<script>
+export default {
+  mounted() {
+    const allParagraphs = document.querySelectorAll('p');
+    const allImages = document.querySelectorAll('img');
+    const allHeadings = document.querySelectorAll('h3');
+
+    allParagraphs.forEach((paragraph) => {
+      if (!paragraph.classList.contains('dontFadeIn')) {
+        paragraph.classList.add('primedForAnimation');
+      }
+    });
+
+    allImages.forEach((image) => {
+      if (!image.classList.contains('dontFadeIn')) {
+        image.classList.add('primedForAnimation');
+      }
+    });
+
+    allHeadings.forEach((heading) => {
+      if (!heading.classList.contains('dontFadeIn')) {
+        heading.classList.add('primedForAnimation');
+      }
+    });
+
+    // Create a new Intersection Observer instance
+    const observer = new IntersectionObserver((entries) => {
+      // Loop over the entries
+      entries.forEach(entry => {
+        // If the element is fully in view
+        if (entry.intersectionRatio === 1 && !entry.target.classList.contains('inView')) {
+
+          entry.target.classList.add('inView');
+        }
+      });
+    }, {
+      threshold: 1.0 // Trigger the callback when the element is fully in view
+    });
+
+    // Start observing the right-text-below element
+    allParagraphs.forEach((paragraph) => {
+      if (!paragraph.classList.contains('dontFadeIn')) {
+        observer.observe(paragraph);
+      }
+    });
+
+    allImages.forEach((image) => {
+      if (!image.classList.contains('dontFadeIn')) {
+        observer.observe(image);
+      }
+    });
+
+    allHeadings.forEach((heading) => {
+      if (!heading.classList.contains('dontFadeIn')) {
+        observer.observe(heading);
+      }
+    });
+  }
+}
+
+
 </script>
 
 <style scoped>
@@ -40,23 +100,24 @@
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    height: 170vh;
+    height: 200vh;
 }
 
 .container {
     display: flex; 
     align-items: center; 
-    height: 100px;
+    height: 200px;
+    justify-content: flex-start; /* Aligns the child elements to the start of the container */
 }
 
 .Fortis-Green {
-    font-size: 48px; 
+    font-size: 38px; 
     font-weight: bold; 
     line-height: 1; 
     color: #000000;
-    margin-left:150px;
-
+    font-family: "Soliden-Bold";
 }
+
 
 .text-container {
     display: flex;
@@ -64,7 +125,7 @@
     align-items: flex-start;
     flex-direction: column;
     width: 60%;
-    height: 30%;
+    height: 40%;
   }
 
   .text-container-top{
@@ -85,6 +146,7 @@
     text-align: justify;
     font-size:22px; 
     width: 50vw;
+    font-family: "Mundial";
     }
 
     .bottom-line-container{

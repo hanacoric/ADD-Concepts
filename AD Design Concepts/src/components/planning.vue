@@ -30,6 +30,7 @@
                 <p> Oakhill Avenue, Highgate </p>
             </div>
                  <img src="../assets/images/image23.jpg" alt="Ravenscroft Avenue, Golders Green">
+          
                  
                
                 </div>
@@ -91,21 +92,77 @@
 
     </section>
 </template>
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
-const imgElements = document.querySelectorAll('img');
+  const imgElements = document.querySelectorAll('img');
 
-imgElements.forEach(img => {
-  img.classList.add('blackandwhite');
+  imgElements.forEach(img => {
+    img.classList.add('blackandwhite');
 
-  });
+    });
 });
+
+export default {
+  mounted() {
+    const allParagraphs = document.querySelectorAll('p');
+    const allHeadings = document.querySelectorAll('h3, h2');
+
+    allParagraphs.forEach((paragraph) => {
+      if (!paragraph.classList.contains('dontFadeIn')) {
+        paragraph.classList.add('primedForAnimation');
+      }
+    });
+
+    allHeadings.forEach((heading) => {
+      if (!heading.classList.contains('dontFadeIn')) {
+        heading.classList.add('primedForAnimation');
+      }
+    });
+
+    // Create a new Intersection Observer instance
+    const observer = new IntersectionObserver((entries) => {
+      // Loop over the entries
+      entries.forEach(entry => {
+        // If the element is fully in view
+        if (entry.intersectionRatio === 1 && !entry.target.classList.contains('inView')) {
+
+          entry.target.classList.add('inView');
+        }
+      });
+    }, {
+      threshold: 1.0 // Trigger the callback when the element is fully in view
+    });
+
+    // Start observing the right-text-below element
+    allParagraphs.forEach((paragraph) => {
+      if (!paragraph.classList.contains('dontFadeIn')) {
+        observer.observe(paragraph);
+      }
+    });
+
+    allHeadings.forEach((heading) => {
+      if (!heading.classList.contains('dontFadeIn')) {
+        observer.observe(heading);
+      }
+    });
+  }
+}
 
 </script>
 
 <style scoped>
+
+@keyframes loadText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 @keyframes growAndRemoveFilter {
   0% {
     transform: scale(1);
@@ -136,10 +193,20 @@ imgElements.forEach(img => {
     transform: translateY(50%);
   }
 }
+
+img:hover {
+  animation: growAndRemoveFilter 0.5s forwards;
+}
+
+img:not(:hover) {
+  animation: shrinkAndApplyFilter 0.5s forwards;
+}
+
+
 .planning-container {
     display: flex; 
     align-items: center; 
-    height: 100px;
+    height: 250px;
 }
 
 .planning {
@@ -148,192 +215,204 @@ imgElements.forEach(img => {
     line-height: 1; 
     color: #000000;
     margin-left:150px;
+    font-family: "Soliden-Bold";
 
 }
 
 .projects-pictures {
-    display: flex;
-    justify-content:center; 
-    align-items: center; 
-    flex-direction: column;
-    margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .row {
-    width: 85vw;
-    display: flex;
-    justify-content:space-between;
-    align-items: center; 
-    height:50vh;
-    
+  width: 85vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60vh;
 }
 .row > div {
-    flex-basis: 45%; 
-    text-align:center; 
-    
+  flex-basis: 45%;
+  text-align: center;
 }
-
 
 .row img {
-    display: block;
-    margin: 0 auto;
-    width: 150%; 
-    height: auto; 
-    max-width: 400px; 
-    display: block; 
+  display: block;
+  margin: 0 auto;
+  width: 150%;
+  height: auto;
+  max-width: 350px;
+  display: block;
 }
-
 
 .row p {
-    color: #333; 
-    font-size: 16px; 
-    margin-top: 8px; 
-    justify-content: center;
+  color: #000000;
+  font-size: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  font-family: "Mundial";
 }
 .row-two {
-    width: 85vw;
-    display: flex;
-    justify-content:space-between;
-    align-items: center; 
-    height:50vh;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60vh;
 }
 
 .row-two > div {
-    flex-basis: 45%; 
-    
+  flex-basis: 45%;
 }
 
 .row-two img {
-    display: block;
-    margin: 0 auto;
-    width: 150%; 
-    height: auto; 
-    max-width: 400px; 
-    display: block; 
+  display: block;
+  margin: 0 auto;
+  width: 150%;
+  height: auto;
+  max-width: 320px;
+  display: block;
 }
 
 .row-two p {
-    color: #333; 
-    font-size: 16px; 
-    margin-top: 10px; 
-    justify-content: center;
-    text-align: center;
-   
+  color: #000000;
+  font-size: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  text-align: center;
+  font-family: "Mundial";
 }
 
 .row-three {
-    width: 85vw;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    height: 50vh;
+  width: 85vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60vh;
 }
 
 .row-three > div {
-    flex-basis: 45%; 
-    text-align:center; 
+  flex-basis: 45%;
+  text-align: center;
 }
 
 .row-three img {
-    display: block;
-    margin: 0 auto;
-    width: 150%; 
-    height: auto; 
-    max-width: 400px; 
-    display: block; 
+  display: block;
+  margin: 0 auto;
+  width: 150%;
+  height: auto;
+  max-width: 350px;
+  display: block;
 }
 
 .row-three p {
-    color: #333; 
-    font-size: 16px; 
-    margin-top: 8px; 
-    justify-content: left;
+  color: #000000;
+  font-size: 20px;
+  margin-top: 20px;
+  justify-content: left;
+  font-family: "Mundial";
 }
 
 .row-four {
-    width: 85vw;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    height:50vh;
+  width: 85vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60vh;
 }
 
 .row-four > div {
-    flex-basis: 45%; 
-    text-align:center; 
+  flex-basis: 45%;
+  text-align: center;
 }
 
 .row-four img {
-    display: block;
-    margin: 0 auto;
-    width: 150%; 
-    height: auto; 
-    max-width: 400px; 
-    display: block; 
+  display: block;
+  margin: 0 auto;
+  width: 150%;
+  height: auto;
+  max-width: 350px;
+  display: block;
 }
 
 .row-four p {
-    color: #333; 
-    font-size: 16px; 
-    margin-top: 8px; 
-    justify-content: left;
+  color: #000000;
+  font-size: 20px;
+  margin-top: 20px;
+  justify-content: left;
+  font-family: "Mundial";
 }
 
 .row-five {
-    width: 85vw;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    height:50vh;
+  width: 85vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60vh;
 }
 
 .row-five > div {
-    flex-basis: 45%; 
-    text-align:center; 
+  flex-basis: 45%;
+  text-align: center;
 }
 
 .row-five img {
-    display: block;
-    margin: 0 auto;
-    width: 150%; 
-    height: auto; 
-    max-width: 400px; 
-    display: block; 
+  display: block;
+  margin: 0 auto;
+  width: 150%;
+  height: auto;
+  max-width: 350px;
+  display: block;
 }
 
 .row-five p {
-    color: #333; 
-    font-size: 16px; 
-    margin-top: 8px; 
-    justify-content: left;
+  color: #000000;
+  font-size: 20px;
+  margin-top: 20px;
+  justify-content: left;
+  font-family: "Mundial";
 }
 
 .row-six {
-    width: 75vw;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    height:50vh;
+  width: 75vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
 }
 
 .row-six > div {
-    flex-basis: 45%; 
-    text-align:center; 
+  flex-basis: 45%;
+  text-align: center;
 }
 
 .row-six img {
-    display: block;
-    margin: 0 auto;
-    width: 150%; 
-    height: auto; 
-    max-width: 400px; 
-    display: block; 
+  display: block;
+  margin: 0 auto;
+  width: 150%;
+  height: auto;
+  max-width: 400px;
+  display: block;
 }
 
 .row-six p {
-    color: #333; 
-    font-size: 16px; 
-    margin-top: 8px; 
-    justify-content: left;
+  color: #000000;
+  font-size: 20px;
+  margin-top: 20px;
+  justify-content: left;
+  font-family: "Mundial";
+}
+
+.blackandwhite {
+  filter: grayscale(100%);
+}
+
+.inView {
+  animation: loadText 1s forwards;
+}
+
+.primedForAnimation {
+  opacity: 0;
 }
 
 @media (max-width: 768px) {
