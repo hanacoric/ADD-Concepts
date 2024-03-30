@@ -1,13 +1,12 @@
-  flex: none;
-  background-color: black;
-  height: 5px;
-  width: 200px;<template>
+<template>
   <section>
     <div class="people-contact-container">
+      <div class="people-contact-box">
       <div class="people-contact-line"></div>
       <div class="people-contact">
         <h1> CONTACT</h1>
       </div>
+    </div>
     </div>
     <div class="info">
       <div class="intro">
@@ -48,32 +47,131 @@
   </section>
 </template>
 
-<script></script>
+<script>
+export default {
+  mounted() {
+    const allParagraphs = document.querySelectorAll('p');
+    const allImages = document.querySelectorAll('img');
+    const allHeadings = document.querySelectorAll('h3');
+
+    allParagraphs.forEach((paragraph) => {
+      if (!paragraph.classList.contains('dontFadeIn')) {
+        paragraph.classList.add('primedForAnimation');
+      }
+    });
+
+    allImages.forEach((image) => {
+      if (!image.classList.contains('dontFadeIn')) {
+        image.classList.add('primedForAnimation');
+      }
+    });
+
+    allHeadings.forEach((heading) => {
+      if (!heading.classList.contains('dontFadeIn')) {
+        heading.classList.add('primedForAnimation');
+      }
+    });
+
+    // Create a new Intersection Observer instance
+    const observer = new IntersectionObserver((entries) => {
+      // Loop over the entries
+      entries.forEach(entry => {
+        // If the element is fully in view
+        if (entry.intersectionRatio === 1 && !entry.target.classList.contains('inView')) {
+
+          entry.target.classList.add('inView');
+        }
+      });
+    }, {
+      threshold: 1.0 // Trigger the callback when the element is fully in view
+    });
+
+    // Start observing the right-text-below element
+    allParagraphs.forEach((paragraph) => {
+      if (!paragraph.classList.contains('dontFadeIn')) {
+        observer.observe(paragraph);
+      }
+    });
+
+    allImages.forEach((image) => {
+      if (!image.classList.contains('dontFadeIn')) {
+        observer.observe(image);
+      }
+    });
+
+    allHeadings.forEach((heading) => {
+      if (!heading.classList.contains('dontFadeIn')) {
+        observer.observe(heading);
+      }
+    });
+  }
+}
+</script>
 
 <style scoped>
+@keyframes slideInLeftToRight{
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes loadText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.section {
+  height: 800vh;
+  width: 100%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 .people-contact-container {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
   align-items: center;
-  height: 70vh;
+  width: 100%;
+  
+}
+
+.people-contact-box {
+ width:50%;
+ display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
 }
 
 .people-contact-line {
   flex: none;
   background-color: black;
-  height: 5px;
-  width: 200px;
+  height: 7px;
+  width: 190px;
+  animation: slideInLeftToRight 2s forwards;
 }
 .people-contact {
   font-size: 60px;
   font-weight: bold;
   line-height: 2.5;
   color: #000000;
+  font-family: "Soliden-Bold";
+  animation: slideInLeftToRight 1s forwards;
 }
 
 .info {
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,6 +192,7 @@
   line-height: 1.5;
   color: #000000;
   font-weight:400;
+  font-family:"Mundial";
 }
 
 .image-container-top {
@@ -121,7 +220,7 @@
 }
 
 .text {
-  max-width: 50%;
+  width: 50%;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -157,5 +256,12 @@ img {
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-end;
+}
+.inView {
+  animation: loadText 1s forwards;
+}
+
+.primedForAnimation {
+  opacity: 0;
 }
 </style>

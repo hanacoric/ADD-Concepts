@@ -142,35 +142,37 @@
 </template>
 
 <script>
-document.addEventListener("DOMContentLoaded", (event) => {
-  const hamburgerMenu = document.getElementById("hamburger-id");
-  const arrowLeft = document.querySelector(".arrow-left");
-  const arrowRight = document.querySelector(".arrow-right");
-  let timerId;
+export default {
+  mounted() {
+    const hamburgerMenu = document.getElementById("hamburger-id");
+    const arrowLeft = document.querySelector(".arrow-left");
+    const arrowRight = document.querySelector(".arrow-right");
+    let timerId;
 
-  if (hamburgerMenu) {
-    hamburgerMenu.addEventListener("click", toggleMenuIcons);
-  }
-  timerId = setInterval(() => {
-    switchImage(false);
-  }, 5000);
-
-  arrowLeft.addEventListener("click", () => {
-    clearInterval(timerId);
-    switchImage(true);
-    timerId = setInterval(() => {
-      switchImage(true);
-    }, 5000);
-  });
-
-  arrowRight.addEventListener("click", () => {
-    clearInterval(timerId);
-    switchImage(false);
+    if (hamburgerMenu) {
+      hamburgerMenu.addEventListener("click", toggleMenuIcons);
+    }
     timerId = setInterval(() => {
       switchImage(false);
     }, 5000);
 
-});
+    arrowLeft.addEventListener("click", () => {
+      clearInterval(timerId);
+      switchImage(true);
+      timerId = setInterval(() => {
+        switchImage(true);
+      }, 5000);
+    });
+
+    arrowRight.addEventListener("click", () => {
+      clearInterval(timerId);
+      switchImage(false);
+      timerId = setInterval(() => {
+        switchImage(false);
+      }, 5000);
+    });
+    }
+};
 
 function toggleMenuIcons() {
   const hamburgerIcon = document.querySelector(".icon-hamburger");
@@ -208,9 +210,9 @@ function toggleMenuIcons() {
 function switchImage(reverseOrder = false) {
   let mainSection = document.querySelector(".main-section");
 
-  let image1 = "src/assets/images/Image05.jpg";
-  let image2 = "src/assets/images/backdrop2.jpg";
-  let image3 = "src/assets/images/backdrop3.jpg";
+  let image1 = "src/assets/images/mainpage.jpg";
+  let image2 = "src/assets/images/mainpage2.jpg";
+  let image3 = "src/assets/images/mainpage3.jpg";
 
   // Get the backgroundImage of the mainSection
   let currentImage = mainSection.style.backgroundImage;
@@ -236,7 +238,6 @@ function switchImage(reverseOrder = false) {
     }
   }
 }
-});
 </script>
 
 <style scoped>
@@ -279,7 +280,7 @@ function switchImage(reverseOrder = false) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../assets/images/Image05.jpg);
+  background-image: url(../assets/images/mainpage.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;

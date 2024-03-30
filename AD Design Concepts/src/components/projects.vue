@@ -176,61 +176,105 @@
 </template>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+export default {
+  mounted() {
+    setupBlackAndWhite();
+    setupObserver();
+    setupTakeToProject();
+  }
+}
 
+function setupSlideShow(element) {
+  const imageArray = ["/src/assets/images/image06.jpg", "/src/assets/images/image07.jpg", "/src/assets/images/image08.jpg"];
+
+  // Find the index of the current image in the array
+  let currentIndex = imageArray.findIndex(img => element.src.includes(img));
+  // If the current image is the last one in the array, go back to the first image
+  // Otherwise, go to the next image
+  let nextIndex = (currentIndex === imageArray.length - 1) ? 0 : currentIndex + 1;
+
+
+  // Set the src of the image to the next image
+  element.src = imageArray[nextIndex];
+
+}
+
+function setupTakeToProject() {
+  const rows = document.querySelectorAll('.row, .row-two, .row-three, .row-four, .row-five, .row-six');
+
+  rows.forEach(row => {
+    const divs = row.querySelectorAll('div');
+
+    divs.forEach(div => {
+      div.addEventListener('click', () => {
+        window.location.href = "/projects/" + div.className.replace(/-/g, '').toLowerCase();
+      });
+    });
+  });
+}
+
+function setupObserver(){
+  const allParagraphs = document.querySelectorAll('p');
+  const allHeadings = document.querySelectorAll('h3, h2');
+
+  allParagraphs.forEach((paragraph) => {
+    if (!paragraph.classList.contains('dontFadeIn')) {
+      paragraph.classList.add('primedForAnimation');
+    }
+  });
+
+  allHeadings.forEach((heading) => {
+    if (!heading.classList.contains('dontFadeIn')) {
+      heading.classList.add('primedForAnimation');
+    }
+  });
+
+  // Create a new Intersection Observer instance
+  const observer = new IntersectionObserver((entries) => {
+    // Loop over the entries
+    entries.forEach(entry => {
+      // If the element is fully in view
+      if (entry.intersectionRatio === 1 && !entry.target.classList.contains('inView')) {
+
+        entry.target.classList.add('inView');
+      }
+    });
+  }, {
+    threshold: 1.0 // Trigger the callback when the element is fully in view
+  });
+
+  // Start observing the right-text-below element
+  allParagraphs.forEach((paragraph) => {
+    if (!paragraph.classList.contains('dontFadeIn')) {
+      observer.observe(paragraph);
+    }
+  });
+
+  allHeadings.forEach((heading) => {
+    if (!heading.classList.contains('dontFadeIn')) {
+      observer.observe(heading);
+    }
+  });
+}
+
+function setupBlackAndWhite() {
   const imgElements = document.querySelectorAll('img');
+  let originalImage;
+  let intervalId;
 
   imgElements.forEach(img => {
     img.classList.add('blackandwhite');
-
+    img.addEventListener('mouseenter', () => {
+      originalImage = img.src;
+      intervalId = setInterval(() => setupSlideShow(img), 1000);
     });
-});
-
-export default {
-  mounted() {
-    const allParagraphs = document.querySelectorAll('p');
-    const allHeadings = document.querySelectorAll('h3, h2');
-
-    allParagraphs.forEach((paragraph) => {
-      if (!paragraph.classList.contains('dontFadeIn')) {
-        paragraph.classList.add('primedForAnimation');
-      }
+    img.addEventListener('mouseleave', () => {
+      img.src = originalImage;
+      clearInterval(intervalId);
     });
-
-    allHeadings.forEach((heading) => {
-      if (!heading.classList.contains('dontFadeIn')) {
-        heading.classList.add('primedForAnimation');
-      }
-    });
-
-    // Create a new Intersection Observer instance
-    const observer = new IntersectionObserver((entries) => {
-      // Loop over the entries
-      entries.forEach(entry => {
-        // If the element is fully in view
-        if (entry.intersectionRatio === 1 && !entry.target.classList.contains('inView')) {
-
-          entry.target.classList.add('inView');
-        }
-      });
-    }, {
-      threshold: 1.0 // Trigger the callback when the element is fully in view
-    });
-
-    // Start observing the right-text-below element
-    allParagraphs.forEach((paragraph) => {
-      if (!paragraph.classList.contains('dontFadeIn')) {
-        observer.observe(paragraph);
-      }
-    });
-
-    allHeadings.forEach((heading) => {
-      if (!heading.classList.contains('dontFadeIn')) {
-        observer.observe(heading);
-      }
-    });
-  }
+  });
 }
+
 
 </script>
 

@@ -6,7 +6,7 @@ import Planning from "./views/Planning.vue";
 import ListedBuildings from "./views/Listed-Buildings.vue";
 import Residential from "./views/Residential.vue";
 import Interiors from "./views/Interiors.vue";
-import Contact from "./views/Contact.vue";
+import PeopleContact from "./views/Contact.vue";
 import Projects from "./views/Projects.vue";
 import fortisgreen from "./views/Projects/FortisGreen.vue";
 import atriumhouse from "./views/Projects/AtriumHouse.vue";
@@ -58,9 +58,9 @@ export default createRouter({
       path: "/services/interiors",
       component: Interiors,
     },
-    {
-      path: "/services/contact",
-      component: Contact,
+    { 
+      path: "/contact",
+      component: PeopleContact,
     },
     {
       path: "/projects",
@@ -71,15 +71,15 @@ export default createRouter({
       component: fortisgreen,
     },
     {
-      path: "/projects/atriumhouse",
+      path: "/projects/atriumgatehouse",
       component: atriumhouse,
     },
     {
-      path: "/projects/darwen",
+      path: "/projects/darwencomptonavenue",
       component: darwen,
     },
     {
-      path: "/projects/princealbert",
+      path: "/projects/princealbertroad",
       component: princealbert,
     },
     {
@@ -95,7 +95,7 @@ export default createRouter({
       component: bishopshouse,
     },
     {
-      path: "/projects/stapletonhall",
+      path: "/projects/stapletonhallroad",
       component: stapeltonhall,
     },
     {
@@ -115,7 +115,7 @@ export default createRouter({
       component: hillviewroad,
     },
     {
-      path: "/projects/finchleyroad",
+      path: "/projects/307309",
       component: finchleyroad,
     },
     {

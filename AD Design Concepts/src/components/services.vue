@@ -18,7 +18,8 @@
   </div>
   <div class="right-section">
     <div class="planning-box">
-    <h1 class="planning-header">Planning</h1>
+      <h1 class="planning-header" onclick="location.href='/services/planning';">Planning</h1>
+      <div class="underline"></div>
   </div>
     <p class="planning-text">
       Our particular area of expertise is planning advice and obtaining
@@ -32,7 +33,8 @@
   
     <div class="listed-container">
       <div class="text-section">
-        <h1>& Listed Buildings<br />Conservation Areas</h1>
+        <div class="listed-heading"><h1 onclick="location.href='/services/listedbuildings';">& Listed Buildings<br />Conservation Areas</h1>
+          <div class="underline"></div></div>
         <p>
           We have a wealth of experience working on Listed Buildings and
           buildings in Conservation areas
@@ -45,7 +47,8 @@
     <div class="residential-container">
       
       <div class="residential-section">
-        <h1 class="residential-header">Residential</h1>
+        <div class="residential-heading"><h1 class="residential-header" onclick="location.href='/services/residential';">Residential</h1>
+          <div class="underline"></div></div>
         <p class="residential-text">
           Our work stretches from domestic extensions and conversion, through
           new build houses to large new blocks of flats
@@ -60,7 +63,8 @@
         <img src="../assets/images/image12.jpg" alt="Interiors" />
       </div>
       <div class="interiors-section">
-        <h1>Interiors</h1>
+        <div class="interiors-heading"><h1 onclick="location.href='/services/interiors';">Interiors</h1>
+          <div class="underline"></div></div>
         <p>
           We have a wealth of experience working on Listed Buildings and
           buildings in Conservation areas
@@ -74,61 +78,86 @@
 <script>
 export default {
   mounted() {
-    const allParagraphs = document.querySelectorAll('p');
-    const allImages = document.querySelectorAll('img');
-    const allHeadings = document.querySelectorAll('h3, h1, h2');
-
-    allParagraphs.forEach((paragraph) => {
-      if (!paragraph.classList.contains('dontFadeIn')) {
-        paragraph.classList.add('primedForAnimation');
-      }
-    });
-
-    allImages.forEach((image) => {
-      if (!image.classList.contains('dontFadeIn')) {
-        image.classList.add('primedForAnimation');
-      }
-    });
-
-    allHeadings.forEach((heading) => {
-      if (!heading.classList.contains('dontFadeIn')) {
-        heading.classList.add('primedForAnimation');
-      }
-    });
-
-    // Create a new Intersection Observer instance
-    const observer = new IntersectionObserver((entries) => {
-      // Loop over the entries
-      entries.forEach(entry => {
-        // If the element is fully in view
-        if (entry.intersectionRatio === 1 && !entry.target.classList.contains('inView')) {
-
-          entry.target.classList.add('inView');
-        }
-      });
-    }, {
-      threshold: 1.0 // Trigger the callback when the element is fully in view
-    });
-
-    // Start observing the right-text-below element
-    allParagraphs.forEach((paragraph) => {
-      if (!paragraph.classList.contains('dontFadeIn')) {
-        observer.observe(paragraph);
-      }
-    });
-
-    allImages.forEach((image) => {
-      if (!image.classList.contains('dontFadeIn')) {
-        observer.observe(image);
-      }
-    });
-
-    allHeadings.forEach((heading) => {
-      if (!heading.classList.contains('dontFadeIn')) {
-        observer.observe(heading);
-      }
-    });
+    observeItems();
+    expandUnderline();
   }
+}
+
+function observeItems(){
+  const allParagraphs = document.querySelectorAll('p');
+  const allImages = document.querySelectorAll('img');
+  const allHeadings = document.querySelectorAll('h3, h1, h2');
+
+  allParagraphs.forEach((paragraph) => {
+    if (!paragraph.classList.contains('dontFadeIn')) {
+      paragraph.classList.add('primedForAnimation');
+    }
+  });
+
+  allImages.forEach((image) => {
+    if (!image.classList.contains('dontFadeIn')) {
+      image.classList.add('primedForAnimation');
+    }
+  });
+
+  allHeadings.forEach((heading) => {
+    if (!heading.classList.contains('dontFadeIn')) {
+      heading.classList.add('primedForAnimation');
+    }
+  });
+
+  // Create a new Intersection Observer instance
+  const observer = new IntersectionObserver((entries) => {
+    // Loop over the entries
+    entries.forEach(entry => {
+      // If the element is fully in view
+      if (entry.intersectionRatio === 1 && !entry.target.classList.contains('inView')) {
+
+        entry.target.classList.add('inView');
+      }
+    });
+  }, {
+    threshold: 1.0 // Trigger the callback when the element is fully in view
+  });
+
+  // Start observing the right-text-below element
+  allParagraphs.forEach((paragraph) => {
+    if (!paragraph.classList.contains('dontFadeIn')) {
+      observer.observe(paragraph);
+    }
+  });
+
+  allImages.forEach((image) => {
+    if (!image.classList.contains('dontFadeIn')) {
+      observer.observe(image);
+    }
+  });
+
+  allHeadings.forEach((heading) => {
+    if (!heading.classList.contains('dontFadeIn')) {
+      observer.observe(heading);
+    }
+  });
+}
+
+function expandUnderline(element) {
+  const wrappers = document.querySelectorAll('.planning-box, .listed-heading, .residential-heading, .interiors-heading');
+
+  wrappers.forEach((wrapper) => {
+    const underline = wrapper.querySelector('.underline');
+
+    wrapper.addEventListener('mouseover', () => {
+      if (underline.classList.contains('animate-underline-reverse')) {
+        underline.classList.remove('animate-underline-reverse');
+      }
+      underline.classList.add('animate-underline');
+    });
+
+    wrapper.addEventListener('mouseout', () => {
+      underline.classList.remove('animate-underline');
+      underline.classList.add('animate-underline-reverse');
+    });
+  });
 }
 </script>
 
@@ -149,6 +178,24 @@ export default {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes expandUnderline {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes closeUnderline {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
   }
 }
 section {
@@ -215,7 +262,7 @@ section {
 }
 
 .planning-box {
-width:80%;
+width:70%;
 display: flex;
 justify-content: flex-start;
 
@@ -401,6 +448,43 @@ direction: rtl;
   width: 450px;
   height: 250px;
 }
+.listed-heading, .residential-heading, .interiors-heading {
+  width: max-content;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.planning-box{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.planning-box h1 {
+  width: 50%;
+}
+
+.planning-box .underline {
+  width: 0%;
+  max-width: 50%;
+}
+
+
+.underline {
+  height: 2px;
+  background-color: black;
+}
+
+.animate-underline{
+  animation: expandUnderline 0.5s forwards;
+}
+
+.animate-underline-reverse{
+  animation: closeUnderline 0.5s forwards;
+}
+
 .inView {
   animation: loadText 1s forwards;
 }
@@ -408,6 +492,7 @@ direction: rtl;
 .primedForAnimation {
   opacity: 0;
 }
+
 
 @media (max-width: 768px) {
   section {
