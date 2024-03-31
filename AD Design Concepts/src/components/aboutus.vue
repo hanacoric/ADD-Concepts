@@ -329,7 +329,7 @@ img {
 
 @media (max-width: 768px) {
   .aboutus-root{
-    height: 160vh;
+    height: 180vh;
   }
 
   .aboutus-container {

@@ -470,7 +470,7 @@ img {
   .intro h3 {
     /* Adjust the width and font size of the intro text on mobile */
     max-width: 100%; /* 100% to allow text to fit to the width of its container */
-    font-size: 2px;
+    font-size: 20px;
     width: auto; /* Set width to auto to allow text to grow as needed */
   }
 

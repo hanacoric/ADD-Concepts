@@ -519,9 +519,18 @@ direction: rtl;
   }
 
   .planning-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: 100%;
     margin-top: 50px;
+  }
+
+  .planning-box {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .right-section {
@@ -558,8 +567,19 @@ direction: rtl;
 
   .listed-container {
     flex-direction: column;
+
     height: 100%;
     margin-top: 30px;
+  }
+
+
+  .text-section {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .text-section h1 {
@@ -595,13 +615,14 @@ direction: rtl;
   }
 
   .image-residential {
-    width: 100%;
-    height: 50%;
+
+    width: fit-content;
+    height: fit-content;
   }
 
   .image-residential img {
-    width: 80%;
-    height: 60%;
+    width: 100%;
+    height: 70%;
   }
 
   .residential-section {
@@ -628,9 +649,19 @@ direction: rtl;
   .interiors-container {
     flex-direction: column;
     height: 75%;
-    width: 200%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
 
-    
+  .interiors-section {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .interiors-section h1 {
@@ -647,13 +678,13 @@ direction: rtl;
 
 
   .interiors-image {
-    width: 100%;
-    height: 50%;
+    width: fit-content;
+    height: fit-content;
   }
 
   .interiors-image img {
-    width: 80%;
-    height: 60%;
+    width: 100%;
+    height: 55%;
   }
 
 }
