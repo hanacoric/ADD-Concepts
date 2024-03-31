@@ -11,7 +11,7 @@
                 <div class="line-top"></div>
             </div>
             <div class="text-container-bottom">
-                <p>AD Designs secured planning consent for the client to demolish the existing house (apart from retaining and remodelling the front façade) and to erect new house measuring over 17,000 sq. ft. gross internal area. The client then decided to completely refurbish the exiting house and AD Designs assisted the client in the process of refurbishment including interior design and furnishing the house.</p>
+                <p>AD Designs secured planning consent for the client to demolish the existing house, apart from retaining and remodelling the front façade, and to erect new house measuring over 17,000 sq. ft. gross internal area. The client then decided to completely refurbish the exiting house and AD Designs assisted the client in the process of refurbishment including interior design and furnishing the house.</p>
             </div>
           <div class="bottom-line-container">
             <div class="line-bottom">

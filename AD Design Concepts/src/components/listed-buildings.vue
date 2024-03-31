@@ -12,10 +12,13 @@
                   <p> Darwen, Compton Avenue </p>
               </div>
              
-          <div class="Hungerford-Road">
-                  <img src="../assets/images/1-3 Hungerford Road (2).jpg" alt="Hungerford Road, Islington">
-                  <p> Hungerford Road, Islington </p>
-          </div>
+              <div class="Hungerford-Road">
+          <img
+            src="../assets/images/1-3 Hungerford Road.jpg"
+            alt="Hungerford Road, Islington"
+          />
+          <p>Hungerford Road, Islington</p>
+        </div>
           
           </div>
           <div class="row-two">
@@ -449,16 +452,14 @@ opacity: 0;
 
 
 @media (max-width: 768px) {
-    .listed-container {
-    margin-bottom: 50px;
-  }
+
 
     .listed {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-right:150px;
+        width: 30%;
     }
   .listed h1 {
     font-size: 28px;

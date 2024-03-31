@@ -21,7 +21,7 @@
 
         <div class="image-container">
             <div class="image">
-               <img src="../../assets/images/1-3 Hungerford Road (2).jpg" alt="Hungerford Road, Islington">
+               <img src="../../assets/images/1-3 Hungerford Road.jpg" alt="Hungerford Road, Islington">
             </div>
         </div>
     </section>

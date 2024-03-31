@@ -94,7 +94,7 @@ function fadeInElements () {
 
 function switchImages(){
   const image = document.querySelector('.image-container img');
-  const imageArray = ["/src/assets/307309finchleyroadimg/image1.jpg", "/src/assets/307309finchleyroadimg/image2.jpg", "/src/assets/307309finchleyroadimg/image3.jpg", "/src/assets/307309finchleyroadimg/image4.jpg" ];
+  const imageArray = ["/src/assets/307309finchleyroadimg/image1.jpg", "/src/assets/307309finchleyroadimg/image2.jpg" ];
 
   // Find the index of the current image in the array
   let currentIndex = imageArray.findIndex(img => image.src.includes(img));

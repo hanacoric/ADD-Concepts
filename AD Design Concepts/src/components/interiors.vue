@@ -18,7 +18,7 @@
           </div>
           <div class="row-two">
               <div class="Hillview-Road">
-              <img src="../assets/images/Hillview Road_resize.jpg" alt="Hillview Road, London">
+              <img src="../assets/images/8 Hillview Road 01.jpg" alt="Hillview Road, London">
               <p> Hillview Road, London </p>
               </div>
               <div class="Kensington-Church">
@@ -368,15 +368,13 @@ opacity: 0;
 
 
 @media (max-width: 768px) {
-.interiors-container {
-    margin-bottom: 50px;
-  }
+
 
     .interiors {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-right:150px;
+        width: 30%;
     }
   .interiors h1 {
     font-size: 50px;

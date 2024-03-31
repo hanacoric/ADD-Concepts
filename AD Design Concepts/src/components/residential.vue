@@ -29,39 +29,45 @@
                   <img src="../assets/images/10a Okhill Avenue - Existing and Proposed Elevations A.jpg" alt="Oakhill Avenue, Highgate">
                   <p> Oakhill Avenue, Highgate </p>
               </div>
-              <div>
+              <div class="ravenscroftavenue">
                    <img src="../assets/images/image23.jpg" alt="Ravenscroft Avenue, Golders Green">
                     <p> Ravenscroft Avenue, Golders Green </p>
               </div>
           </div>
   
           <div class="row-three">
-              <div class="Stapleton-Hall-Road">
-                  <img src="../assets/images/83 Stepleton Hall Road - after_resize.jpg" alt="Stapleton Hall Road, London ">
-                  <p> Stapleton Hall Road, London  </p>
-              </div>
+            <div class="Stapleton-Hall-Road">
+          <img
+            src="../assets/images/83 Stepleton Hall Road - after.jpg"
+            alt="Stapleton Hall Road, London "
+          />
+          <p>Stapleton Hall Road, London</p>
+        </div>
               <div class="The-Avenue">
                       <img src="../assets/images/9 The Avenue_resize.jpg" alt="The Avenue, London">
                       <p> The Avenue, London </p>
                   </div>
-              <div class="Hampstead-Way">
-                          <img src="../assets/images/17 Hampstead Way_resize.jpg" alt="Hampstead Way, London">
-                          <p> Hampstead Way, London </p>
-                      </div>
+                  <div class="Hampstead-Way">
+          <img
+            src="../assets/images/17 Hampstead Way.jpg"
+            alt="Hampstead Way, London"
+          />
+          <p>Hampstead Way, London</p>
+        </div>
           </div>
           <div class="row-four">
               
-               <div class="Hungerford-Road">
-                  <img src="../assets/images/1-3 Hungerford Road (2).jpg" alt="Hungerford Road, Islington">
+          <div class="Hungerford-Road">
+                  <img src="../assets/images/1-3 Hungerford Road.jpg" alt="Hungerford Road, Islington">
                   <p> Hungerford Road, Islington </p>
               </div>
               <div class="Hillview-Road">
-                  <img src="../assets/images/Hillview Road_resize.jpg" alt="Hillview Road, London">
+                  <img src="../assets/images/8 Hillview Road 01.jpg" alt="Hillview Road, London">
                   <p> Hillview Road, London </p>
               </div>
-                 <div class="307-309">
+                 <div class="threezeroseven">
                               <img src="../assets/images/307 Finchley Road - After 02.jpg" alt="307-309 Finchley Road, London">
-                              <p> 307-309 Finchley Road, London </p>
+                              <p>  Finchley Road, London </p>
                           </div>
           </div>
               <div class="row-five">
@@ -547,21 +553,19 @@ opacity: 0;
 
 
 @media (max-width: 768px) {
-.residential-container {
-    margin-bottom: 50px;
-  }
 
-    .residential {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right:150px;
+
+  .residential {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 30%;
     }
+
   .residential h1 {
     font-size: 50px;
     line-height: 1.5;
     font-weight: bold;
-    
   }
 
   

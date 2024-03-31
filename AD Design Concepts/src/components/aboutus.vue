@@ -127,7 +127,7 @@ function fadeInElements () {
 }
 
 function switchImages(){
-  const image = document.querySelector('.image-container img');
+  const image = document.querySelector('.image-container-bottom img');
   const imageArray = ["/src/assets/images/image06.jpg", "/src/assets/images/image07.jpg", "/src/assets/images/image12.jpg"];
 
   // Find the index of the current image in the array

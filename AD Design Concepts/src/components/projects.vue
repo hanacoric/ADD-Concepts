@@ -58,14 +58,14 @@
       <div class="row-three">
         <div class="Bishops-House">
           <img
-            src="../assets/images/Bishop's House - after_resize.jpg"
+            src="../assets/images/Bishop's House - before.jpg"
             alt="Bishop’s House, East Finchley"
           />
           <p>Bishop’s House, East Finchley</p>
         </div>
         <div class="Stapleton-Hall-Road">
           <img
-            src="../assets/images/83 Stepleton Hall Road - after_resize.jpg"
+            src="../assets/images/83 Stepleton Hall Road - after.jpg"
             alt="Stapleton Hall Road, London "
           />
           <p>Stapleton Hall Road, London</p>
@@ -82,21 +82,21 @@
       <div class="row-four">
         <div class="Hampstead-Way">
           <img
-            src="../assets/images/17 Hampstead Way_resize.jpg"
+            src="../assets/images/17 Hampstead Way.jpg"
             alt="Hampstead Way, London"
           />
           <p>Hampstead Way, London</p>
         </div>
         <div class="Hungerford-Road">
           <img
-            src="../assets/images/1-3 Hungerford Road (2).jpg"
+            src="../assets/images/1-3 Hungerford Road.jpg"
             alt="Hungerford Road, Islington"
           />
           <p>Hungerford Road, Islington</p>
         </div>
         <div class="Hillview-Road">
           <img
-            src="../assets/images/Hillview Road_resize.jpg"
+            src="../assets/images/8 Hillview Road 01.jpg"
             alt="Hillview Road, London"
           />
           <p>Hillview Road, London</p>

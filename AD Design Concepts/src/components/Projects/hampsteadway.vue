@@ -21,7 +21,7 @@
 
         <div class="image-container">
             <div class="image">
-               <img src="../../assets/images/17 Hampstead Way_resize.jpg" alt="Hampstead Way, London">
+               <img src="../../assets/images/17 Hampstead Way.jpg" alt="Hampstead Way, London">
             </div>
         </div>
     </section>
