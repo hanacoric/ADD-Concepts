@@ -39,7 +39,7 @@
           </p>
         </div>
         <div class="image-container-bottom">
-          <img src="../assets/images/face.jpg" alt="Almas" />
+          <img src="../assets/faceimg/face.jpg" alt="Almas" />
         </div>
       </div>
     </div>
@@ -49,62 +49,84 @@
 <script>
 export default {
   mounted() {
-    const allParagraphs = document.querySelectorAll('p');
-    const allImages = document.querySelectorAll('img');
-    const allHeadings = document.querySelectorAll('h3');
-
-    allParagraphs.forEach((paragraph) => {
-      if (!paragraph.classList.contains('dontFadeIn')) {
-        paragraph.classList.add('primedForAnimation');
-      }
-    });
-
-    allImages.forEach((image) => {
-      if (!image.classList.contains('dontFadeIn')) {
-        image.classList.add('primedForAnimation');
-      }
-    });
-
-    allHeadings.forEach((heading) => {
-      if (!heading.classList.contains('dontFadeIn')) {
-        heading.classList.add('primedForAnimation');
-      }
-    });
-
-    // Create a new Intersection Observer instance
-    const observer = new IntersectionObserver((entries) => {
-      // Loop over the entries
-      entries.forEach(entry => {
-        // If the element is fully in view
-        if (entry.intersectionRatio === 1 && !entry.target.classList.contains('inView')) {
-
-          entry.target.classList.add('inView');
-        }
-      });
-    }, {
-      threshold: 1.0 // Trigger the callback when the element is fully in view
-    });
-
-    // Start observing the right-text-below element
-    allParagraphs.forEach((paragraph) => {
-      if (!paragraph.classList.contains('dontFadeIn')) {
-        observer.observe(paragraph);
-      }
-    });
-
-    allImages.forEach((image) => {
-      if (!image.classList.contains('dontFadeIn')) {
-        observer.observe(image);
-      }
-    });
-
-    allHeadings.forEach((heading) => {
-      if (!heading.classList.contains('dontFadeIn')) {
-        observer.observe(heading);
-      }
-    });
+    fadeInElements();
+    setInterval(switchImages, 3000);
   }
 }
+
+function fadeInElements () {
+  const allParagraphs = document.querySelectorAll('p');
+  const allImages = document.querySelectorAll('img');
+  const allHeadings = document.querySelectorAll('h3');
+
+  allParagraphs.forEach((paragraph) => {
+    if (!paragraph.classList.contains('dontFadeIn')) {
+      paragraph.classList.add('primedForAnimation');
+    }
+  });
+
+  allImages.forEach((image) => {
+    if (!image.classList.contains('dontFadeIn')) {
+      image.classList.add('primedForAnimation');
+    }
+  });
+
+  allHeadings.forEach((heading) => {
+    if (!heading.classList.contains('dontFadeIn')) {
+      heading.classList.add('primedForAnimation');
+    }
+  });
+
+  // Create a new Intersection Observer instance
+  const observer = new IntersectionObserver((entries) => {
+    // Loop over the entries
+    entries.forEach(entry => {
+      // If the element is fully in view
+      if (entry.intersectionRatio === 1 && !entry.target.classList.contains('inView')) {
+
+        entry.target.classList.add('inView');
+      }
+    });
+  }, {
+    threshold: 1.0 // Trigger the callback when the element is fully in view
+  });
+
+  // Start observing the right-text-below element
+  allParagraphs.forEach((paragraph) => {
+    if (!paragraph.classList.contains('dontFadeIn')) {
+      observer.observe(paragraph);
+    }
+  });
+
+  allImages.forEach((image) => {
+    if (!image.classList.contains('dontFadeIn')) {
+      observer.observe(image);
+    }
+  });
+
+  allHeadings.forEach((heading) => {
+    if (!heading.classList.contains('dontFadeIn')) {
+      observer.observe(heading);
+    }
+  });
+}
+
+function switchImages(){
+  const image = document.querySelector('.image-container img');
+  const imageArray = ["/src/assets/faceimg/face.jpg", "/src/assets/faceimg/face2.jpg"];
+
+  // Find the index of the current image in the array
+  let currentIndex = imageArray.findIndex(img => image.src.includes(img));
+  // If the current image is the last one in the array, go back to the first image
+  // Otherwise, go to the next image
+  let nextIndex = (currentIndex === imageArray.length - 1) ? 0 : currentIndex + 1;
+
+
+  // Set the src of the image to the next image
+  image.src = imageArray[nextIndex];
+}
+
+   
 </script>
 
 <style scoped>
@@ -263,27 +285,7 @@ img {
 }
 
 .primedForAnimation {
-  opacity: 0;
-}
-
-@keyframes slideInLeftToRight{
-  0%{
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes loadText {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  opacity: 0;
 }
 
 .contact-wrapper {
@@ -472,18 +474,24 @@ img {
     max-width: 100%; /* 100% to allow text to fit to the width of its container */
     font-size: 20px;
     width: auto; /* Set width to auto to allow text to grow as needed */
+    margin-bottom: 50px;
   }
 
 
-  .image-container {
-    /* Stack image and text on top of each other on smaller screens */
-    flex-direction: column;
-    justify-content: center;
+  .image-container{
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+
+  .image-container-top {
+   display: none;
   }
 
   .text {
     width: 80%;
     margin-bottom: 20px; /* Add some space below the text */
+    margin-top: 50px;
   }
 
   .text p {

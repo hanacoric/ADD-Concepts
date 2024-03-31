@@ -135,7 +135,7 @@ function switchImages(){
     width: 100vw;
     height: 180vh;
 }
-
+ 
 .container {
     display: flex; 
     align-items: center; 

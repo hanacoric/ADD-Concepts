@@ -127,7 +127,7 @@ function fadeInElements () {
 }
 
 function switchImages(){
-  const image = document.querySelector('.image-container-bottom img');
+  const image = document.querySelector('.image-container img');
   const imageArray = ["/src/assets/images/image06.jpg", "/src/assets/images/image07.jpg", "/src/assets/images/image12.jpg"];
 
   // Find the index of the current image in the array
@@ -141,8 +141,8 @@ function switchImages(){
   image.src = imageArray[nextIndex];
 }
 
-</script>
 
+</script>
 <style scoped>
 @keyframes slideInLeftToRight{
   0%{
@@ -335,7 +335,6 @@ img {
   .aboutus-container {
     height: 10vh;
     margin-bottom: 50px;
-    margin-top:50px;
 
   }
 

@@ -159,6 +159,7 @@ function fadeInElements () {
     font-size:30px; 
     width: 50vw;
     font-family:"Mundial";
+    color: #000000;
     }
 
     .bottom-line-container{

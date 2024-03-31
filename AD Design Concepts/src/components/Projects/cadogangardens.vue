@@ -26,11 +26,106 @@
         </div>
     </section>
 </template>
-
 <script>
+export default {
+  mounted() {
+    fadeInElements();
+    setInterval(switchImages, 3000);
+  }
+}
+
+function fadeInElements () {
+  const allParagraphs = document.querySelectorAll('p');
+  const allImages = document.querySelectorAll('img');
+  const allHeadings = document.querySelectorAll('h3');
+
+  allParagraphs.forEach((paragraph) => {
+    if (!paragraph.classList.contains('dontFadeIn')) {
+      paragraph.classList.add('primedForAnimation');
+    }
+  });
+
+  allImages.forEach((image) => {
+    if (!image.classList.contains('dontFadeIn')) {
+      image.classList.add('primedForAnimation');
+    }
+  });
+
+  allHeadings.forEach((heading) => {
+    if (!heading.classList.contains('dontFadeIn')) {
+      heading.classList.add('primedForAnimation');
+    }
+  });
+
+  // Create a new Intersection Observer instance
+  const observer = new IntersectionObserver((entries) => {
+    // Loop over the entries
+    entries.forEach(entry => {
+      // If the element is fully in view
+      if (entry.intersectionRatio === 1 && !entry.target.classList.contains('inView')) {
+
+        entry.target.classList.add('inView');
+      }
+    });
+  }, {
+    threshold: 1.0 // Trigger the callback when the element is fully in view
+  });
+
+  // Start observing the right-text-below element
+  allParagraphs.forEach((paragraph) => {
+    if (!paragraph.classList.contains('dontFadeIn')) {
+      observer.observe(paragraph);
+    }
+  });
+
+  allImages.forEach((image) => {
+    if (!image.classList.contains('dontFadeIn')) {
+      observer.observe(image);
+    }
+  });
+
+  allHeadings.forEach((heading) => {
+    if (!heading.classList.contains('dontFadeIn')) {
+      observer.observe(heading);
+    }
+  });
+}
+
+function switchImages(){
+  const image = document.querySelector('.image-container img');
+  const imageArray = ["/src/assets/cadogangardens/image1.jpg", "/src/assets/cadogangardens/image2.jpg" ];
+
+  // Find the index of the current image in the array
+  let currentIndex = imageArray.findIndex(img => image.src.includes(img));
+  // If the current image is the last one in the array, go back to the first image
+  // Otherwise, go to the next image
+  let nextIndex = (currentIndex === imageArray.length - 1) ? 0 : currentIndex + 1;
+
+  // Set the src of the image to the next image
+  image.src = imageArray[nextIndex];
+}
 </script>
 
 <style scoped>
+@keyframes slideInLeftToRight{
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes loadText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .section-wrapper {
     display: flex;
     justify-content: space-between;
@@ -83,6 +178,7 @@
     font-size:25px; 
     width: 50vw;
     font-family:"Mundial";
+    color:#000000;
     }
 
     .bottom-line-container{
@@ -127,6 +223,15 @@
         width: 60vw;
         height: 80vh;
     }
+
+    .inView {
+  animation: loadText 1s forwards;
+}
+
+.primedForAnimation {
+  opacity: 0;
+}
+
     @media (max-width: 768px) {
   .section-wrapper {
     height: auto; /* Height should adjust to content */

@@ -34,6 +34,9 @@ import KensingtonChurch from "./views/Projects/KensingtonChurch.vue";
 </template>
 
 <style scoped>
+
+
+
 @font-face {
   font-family: "Mundial";
     src: url("./assets/fonts/Mundial.otf") format("truetype");
@@ -43,10 +46,12 @@ import KensingtonChurch from "./views/Projects/KensingtonChurch.vue";
   font-family: "Soliden-Bold";
   src: url("./assets/fonts/SolidenTrial-Bold.ttf") format("truetype");
 }
+
 #app {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
 }
+
 </style>

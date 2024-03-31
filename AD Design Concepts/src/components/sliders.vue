@@ -422,7 +422,8 @@ text{
 .main-section {
   justify-content: center;
   align-items: stretch;
-  background-image: url(../assets/images/Image05-mobile.jpg);
+  position: relative;
+  overflow: hidden;
 }
 
 .hamburger-menu {
@@ -437,12 +438,12 @@ text{
 }
 
 .sliders {
-  flex-direction: column; 
-  justify-content: flex-start;
-  height: auto; 
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   justify-content: space-evenly;
   align-items: center;
+
   
 }
 
@@ -456,6 +457,7 @@ text{
 
 .slider-text {
   width: 60%; 
+  padding: 10px; 
   box-sizing: border-box; 
 }
 
@@ -540,20 +542,20 @@ text{
   }
 
   /* Handle the opening and closing animations for the mobile menu */
-  .nav-content.animate {
+  .animate {
     animation: slideInRightToLeft 0.5s forwards;
   }
 
-  .nav-content.animate-out {
+  .animate-out {
     animation: slideOutLeftToRight 0.5s forwards;
   }
 
   .disabled {
-    opacity: 0.5; 
-  }
+    opacity: 0;
 }
 
-
+} 
 
 </style>
+
 

@@ -11,7 +11,7 @@
                 <div class="line-top"></div>
             </div>
             <div class="text-container-bottom">
-                <p>AD Designs worked closely with the client to create a charming development of 4 terraced houses and a block of flats containing 5 apartments. We secured planning permission to demolish two existing houses on site and create a new development of 23,000 sq. ft. AD Designs took the project from inception to completion, assisting the client through all phases of development. </p>
+                <p>AD Designs worked closely with the client to create a charming development of four terraced houses and a block of flats containing five apartments. We secured planning permission to demolish two existing houses on site and create a new development of 23,000 sq. ft. AD Designs took the project from inception to completion, assisting the client through all phases of development. </p>
             </div>
           <div class="bottom-line-container">
             <div class="line-bottom">
@@ -27,9 +27,6 @@
     </section>
 </template>
 
-<script>
-
-</script>
 <script>
 function fadeInElements () {
   const allParagraphs = document.querySelectorAll('p');
@@ -162,6 +159,7 @@ function fadeInElements () {
     font-size:25px; 
     width: 50vw;
     font-family:"Mundial" ;
+    color:#000000;
     }
 
     .bottom-line-container{

@@ -502,14 +502,13 @@ direction: rtl;
     font-size: 40px;
   }
 
-  .services-container {
-    margin-bottom: 50px;
-  }
+
 
   .services h1 {
     font-size: 50px;
     line-height: 1.5;
     font-weight: bold;
+    
     
   }
 
@@ -519,6 +518,8 @@ direction: rtl;
   }
 
   .planning-container {
+    display: flex;
+    justify-content: center;
     flex-direction: column-reverse;
     height: 100%;
     margin-top: 50px;
@@ -535,7 +536,7 @@ direction: rtl;
 
   .right-section {
     width: 100%;
-    height: 50%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -543,25 +544,27 @@ direction: rtl;
   }
 
   .planning-header {
+    display: flex;
+    justify-content: center;
     font-size: 40px;
     text-align: center;
+
   }
 
   .planning-text {
     font-size: 18px;
     text-align: center;
     margin-top: 10px;
-    max-width: 90%;
-    margin-bottom: 50px;
+    max-width: 100%;
   }
 
   .image-planning {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
   }
 
   .image-planning img {
-    width: 80%;
+    width: 100%;
     height: 60%;
   }
 
@@ -569,13 +572,12 @@ direction: rtl;
     flex-direction: column;
 
     height: 100%;
-    margin-top: 30px;
   }
 
 
   .text-section {
     width: 100%;
-    height: 50%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -588,13 +590,13 @@ direction: rtl;
   }
 
   .listed-image {
-    width: 100%;
-    height: 50%;
+    width: 300px;
+    height: 300px;
   }
 
   .listed-image img {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 60%;
   }
 
   .text-section p {
@@ -603,15 +605,14 @@ direction: rtl;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    
+    padding:0;
+
+
   }
 
   .residential-container {
     flex-direction: column;
     height: 75%;
-    margin-top: 50px;
   }
 
   .image-residential {

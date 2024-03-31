@@ -109,7 +109,7 @@
             src="../assets/images/307 Finchley Road - After 02.jpg"
             alt="307-309 Finchley Road, London"
           />
-          <p>307-309 Finchley Road, London</p>
+          <p> Finchley Road, London</p>
         </div>
         <div class="Holland-Park">
           <img
@@ -753,6 +753,7 @@ img:not(:hover) {
 
   .projects-container {
     margin-bottom: 50px;
+    height: 20px;
   }
 
   .projects h1 {

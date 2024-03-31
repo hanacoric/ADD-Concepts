@@ -158,9 +158,10 @@ function fadeInElements () {
 
     .text-container-bottom p{
     text-align: justify;
-    font-size:30px; 
+    font-size:29px; 
     width: 50vw;
     font-family: "Mundial";
+    color:#000000;
     }
 
     .bottom-line-container{

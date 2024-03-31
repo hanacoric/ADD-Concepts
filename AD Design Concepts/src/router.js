@@ -115,7 +115,7 @@ export default createRouter({
       component: hillviewroad,
     },
     {
-      path: "/projects/307309",
+      path: "/projects/threezeroseven",
       component: finchleyroad,
     },
     {
