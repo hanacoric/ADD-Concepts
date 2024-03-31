@@ -1,6 +1,7 @@
 <template>
-    <div class="logo">
-          <a href="/"><svg id="add_concepts_logo_with_outline" data-name="add concepts logo with outline" xmlns="http://www.w3.org/2000/svg" width="328.76" height="249.78" viewBox="0 0 628.76 349.78">
+    <div class="logo-positioner">
+      <div class="logo">
+        <a href="/"><svg id="add_concepts_logo_with_outline" data-name="add concepts logo with outline" xmlns="http://www.w3.org/2000/svg" width="328.76" height="249.78" viewBox="0 0 628.76 349.78">
           <rect id="Rectangle_17" data-name="Rectangle 17" width="47.77" height="106.11" transform="translate(234.57 1.52)" fill="#231f20"/>
           <path id="Path_88" data-name="Path 88" d="M0,347.79,135.05,1.52H252.81l137.9,346.27H282.43l-24.17-67.84H120.84L96.67,347.79H0ZM234.57,213.74,190.26,69.36,141.69,213.74Z" fill="#231f20"/>
           <path id="Path_89" data-name="Path 89" d="M526.57,175.09c0,38.82-9.3,66.32-27.5,83.3-17.79,16.58-46.1,24.67-84.92,24.67H379.78V66.31h34.37c38.82,0,67.12,8.09,84.92,24.67C517.27,108.37,526.57,136.27,526.57,175.09Z" fill="#231f20"/>
@@ -21,10 +22,12 @@
           <path id="Path_104" data-name="Path 104" d="M405.35,136.3a30.6,30.6,0,0,1,.33,4.19q0,5.79-4.81,5.79h-8.32v3.14h-4.03v-3.14H385.9l-2.54-6.07h5.16V136.3h4.03v3.99h7.1c1.28,0,1.92-.76,1.92-2.27,0-.17-.02-.47-.05-.88l-.07-.85h3.9Z" fill="#eeece9"/>
           <path id="Path_105" data-name="Path 105" d="M399.95,128.21h.21c1.47,0,2.21-.68,2.21-2.03s-.56-2.06-1.69-2.06c-.73,0-1.4,1.09-2,3.26-.03.1-.07.22-.11.38a16.9,16.9,0,0,1-1.56,4.21,4.089,4.089,0,0,1-3.67,2.01,4.413,4.413,0,0,1-4.17-2.64,11.065,11.065,0,0,1-1.06-5.14,10.642,10.642,0,0,1,1.1-5.14,4.586,4.586,0,0,1,4.31-2.47h.13v5.76h-.2c-1.47,0-2.21.68-2.21,2.05,0,1.21.46,1.82,1.38,1.82.86,0,1.62-1.26,2.26-3.78l.21-.83a12.43,12.43,0,0,1,1.49-3.81,4.052,4.052,0,0,1,3.5-1.62q5.685,0,5.68,8.41,0,7.74-5.6,7.74h-.21v-6.11Z" fill="#eeece9"/>
         </svg></a>
+      </div>
     </div>
 </template>
 
-<script></script>
+<script>
+</script>
 
 <style scoped>
 .logo {
@@ -39,6 +42,12 @@
 }
 
 @media (max-width: 768px) {
+  .logo-positioner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
     .logo svg{
         width: 80%;
         height: 80%;
@@ -50,6 +59,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    }
+      width: 50%;
+      height: 50%;
+}
 }
 </style>

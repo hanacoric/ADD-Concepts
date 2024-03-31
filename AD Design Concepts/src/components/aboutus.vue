@@ -329,16 +329,18 @@ img {
 
 @media (max-width: 768px) {
   .aboutus-root{
-    height: 215vh;
+    height: 160vh;
   }
 
   .aboutus-container {
+    height: 10vh;
     margin-bottom: 50px;
+    margin-top:50px;
 
   }
 
   .aboutus h1 {
-    font-size: 40px;
+    font-size: 50px;
     line-height: 1.5;
     font-weight: bold;
   
@@ -348,6 +350,11 @@ img {
   .aboutus-line {
     height: 2px;
     width: 70px;
+  }
+
+  .aboutus-box {
+    width: 100%;
+    justify-content: flex-start;
   }
 
 

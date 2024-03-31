@@ -94,14 +94,13 @@ function fadeInElements () {
 
 function switchImages(){
   const image = document.querySelector('.image-container img');
-  const imageArray = ["/src/assets/images/image06.jpg", "/src/assets/images/image05.jpg"];
+  const imageArray = ["/src/assets/darwenimg/image1.jpg", "/src/assets/darwenimg/image2.jpg",  "/src/assets/darwenimg/image3.jpg", "/src/assets/darwenimg/image4.jpg", "/src/assets/darwenimg/image5.jpg", "/src/assets/darwenimg/image6.jpg" ];
 
   // Find the index of the current image in the array
   let currentIndex = imageArray.findIndex(img => image.src.includes(img));
   // If the current image is the last one in the array, go back to the first image
   // Otherwise, go to the next image
   let nextIndex = (currentIndex === imageArray.length - 1) ? 0 : currentIndex + 1;
-
 
   // Set the src of the image to the next image
   image.src = imageArray[nextIndex];
@@ -181,6 +180,7 @@ function switchImages(){
     font-size:22px; 
     width: 50vw;
     font-family: "Mundial";
+    color:#000000;
     }
 
     .bottom-line-container{
@@ -225,6 +225,15 @@ function switchImages(){
         width: 60vw;
         height: 80vh;
     }
+
+    .inView {
+  animation: loadText 1s forwards;
+}
+
+.primedForAnimation {
+  opacity: 0;
+}
+
 
     @media (max-width: 768px) {
   .section-wrapper {

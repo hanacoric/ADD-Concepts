@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="contact-wrapper">
     <div class="people-contact-container">
       <div class="people-contact-box">
       <div class="people-contact-line"></div>
@@ -19,7 +19,6 @@
           <div class="line-top"></div>
         </div>
       </div>
-
       <div class="image-container">
         <div class="text">
           <p>
@@ -129,8 +128,8 @@ export default {
   }
 }
 
-.section {
-  height: 800vh;
+.contact-wrapper {
+  height: 100%;
   width: 100%;  
   display: flex;
   flex-direction: column;
@@ -171,14 +170,14 @@ export default {
 }
 
 .info {
-  width: 90%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .intro {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -212,15 +211,15 @@ export default {
 
 .image-container {
   width: 100%;
-  height: 45vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+
 }
 
 .text {
-  width: 50%;
+  width: 70%;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -229,10 +228,11 @@ export default {
 }
 
 .text p {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
   line-height: 1.5;
   color: #000000;
+  font-family:"Mundial";
 }
 
 .image-container-bottom {
@@ -245,9 +245,10 @@ export default {
 }
 
 img {
-  height: 120%;
-  width: 70%;
+  height: 140%;
+  width: 90%;
   display: block;
+  padding-left:50px;
 }
 
 .bottom-line-container {
@@ -262,6 +263,252 @@ img {
 }
 
 .primedForAnimation {
-  opacity: 0;
+  opacity: 0;
+}
+
+@keyframes slideInLeftToRight{
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes loadText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.contact-wrapper {
+  height: 100%;
+  width: 100%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.people-contact-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.people-contact-box {
+ width:50%;
+ display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.people-contact-line {
+  flex: none;
+  background-color: black;
+  height: 7px;
+  width: 190px;
+  animation: slideInLeftToRight 2s forwards;
+}
+.people-contact {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 2.5;
+  color: #000000;
+  font-family: "Soliden-Bold";
+  animation: slideInLeftToRight 1s forwards;
+}
+
+.info {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.intro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: justify;
+  flex-direction: column;
+}
+
+.intro h3 {
+  max-width: 60%;
+  font-size: 40px;
+  line-height: 1.5;
+  color: #000000;
+  font-weight:400;
+  font-family:"Mundial";
+}
+
+.image-container-top {
+  width: 80%;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+
+.line-top {
+  background-color: black;
+  height: 3px;
+  width: 80%;
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+
+}
+
+.text {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.text p {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  font-family:"Mundial";
+}
+
+.image-container-bottom {
+  width: 60%;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  height: 140%;
+  width: 90%;
+  display: block;
+  padding-left:50px;
+}
+
+.bottom-line-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.inView {
+  animation: loadText 1s forwards;
+}
+
+.primedForAnimation {
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .people-contact-container {
+    margin-bottom: 50px;
+  }
+
+  .people-contact h1 {
+    font-size: 50px;
+    line-height: 1.5;
+    font-weight: bold;
+    
+  }
+
+  .people-contact-line {
+    height: 3px;
+    width: 80px;
+  }
+  .people-contact {
+    font-size: 30px; 
+    line-height: 1.5; 
+  }
+  .contact-wrapper {
+    /* Your styles for the contact wrapper on mobile */
+    flex-direction: column;
+    align-items: center;
+  }
+
+.line-top {
+    display: none;
+  }
+  .info {
+    /* Adjust the width of the info container on mobile */
+    width: 95%;
+  }
+
+  .intro {
+    /* Make sure the intro container is a flexbox and centers its children */
+    display: flex;
+    justify-content: center; /* This will center the h3 horizontally */
+    align-items: center; /* This will center the h3 vertically if needed */
+    width: 80%; /* Adjust as needed, 100% width to utilize full parent width */
+    text-align: justify; /* This will center the text inside h3 */
+  }
+
+  .intro h3 {
+    /* Adjust the width and font size of the intro text on mobile */
+    max-width: 100%; /* 100% to allow text to fit to the width of its container */
+    font-size: 2px;
+    width: auto; /* Set width to auto to allow text to grow as needed */
+  }
+
+
+  .image-container {
+    /* Stack image and text on top of each other on smaller screens */
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .text {
+    width: 80%;
+    margin-bottom: 20px; /* Add some space below the text */
+  }
+
+  .text p {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  .image-container-bottom {
+    /* Adjust image container for mobile */
+    width: 95%;
+    height: auto;
+  }
+
+  img {
+    /* Adjust image size for mobile */
+    height: auto;
+    width: 80%;
+    padding-left: 0; /* Remove padding for mobile */
+  }
+
+  .bottom-line-container {
+    /* Adjust bottom line container if necessary */
+    align-items: center;
+  }
+  
+
 }
 </style>

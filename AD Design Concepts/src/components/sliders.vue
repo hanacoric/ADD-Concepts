@@ -448,15 +448,14 @@ text{
 
 .arrow-left,
 .arrow-right {
-  width: 20px; 
-  height: 20px;
+  width: 15px; 
+  height: 15px;
 
 
 }
 
 .slider-text {
   width: 60%; 
-  padding: 10px; 
   box-sizing: border-box; 
 }
 

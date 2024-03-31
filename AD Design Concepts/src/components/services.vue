@@ -20,7 +20,7 @@
     <div class="planning-box">
       <h1 class="planning-header" onclick="location.href='/services/planning';">Planning</h1>
       <div class="underline"></div>
-  </div>
+    </div>
     <p class="planning-text">
       Our particular area of expertise is planning advice and obtaining
       planning permissions. We work closely with Local Planning Authorities,
@@ -492,7 +492,6 @@ direction: rtl;
 .primedForAnimation {
   opacity: 0;
 }
-
 
 @media (max-width: 768px) {
   section {

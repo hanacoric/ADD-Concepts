@@ -104,7 +104,7 @@
       </div>
 
       <div class="row-five">
-        <div class="307-309">
+        <div class="three-zero-seven">
           <img
             src="../assets/images/307 Finchley Road - After 02.jpg"
             alt="307-309 Finchley Road, London"
@@ -176,16 +176,104 @@
 </template>
 
 <script>
+
 export default {
   mounted() {
+
+
     setupBlackAndWhite();
     setupObserver();
     setupTakeToProject();
   }
 }
 
-function setupSlideShow(element) {
-  const imageArray = ["/src/assets/images/image06.jpg", "/src/assets/images/image07.jpg", "/src/assets/images/image08.jpg"];
+function getFolderPath(element){
+  let fortisGreen = document.querySelector('.Fortis-Green');
+  let atriumGateHouse = document.querySelector('.Atrium-Gate-House');
+  let darwenComptonAvenue = document.querySelector('.Darwen-Compton-Avenue');
+  let bishopsHouse = document.querySelector('.Bishops-House');
+  let stapletonHallRoad = document.querySelector('.Stapleton-Hall-Road');
+  let hillviewRoad = document.querySelector('.Hillview-Road');
+  let threeZeroSeven = document.querySelector('.three-zero-seven');
+  let cadoganGardens = document.querySelector('.Cadogan-Gardens');
+
+  switch (element){
+    case fortisGreen:
+      return "/src/assets/fortisgreenimg/";
+      break;
+    case atriumGateHouse:
+      return "/src/assets/atriumgatehouseimg/";
+      break;
+    case darwenComptonAvenue:
+      return "/src/assets/darwenimg/";
+      break;
+      case threeZeroSeven:
+      return "/src/assets/307309finchleyroadimg/";
+      break;
+      case bishopsHouse:
+      return "/src/assets/bishopshouseimg/";
+      break;
+      case cadoganGardens:
+      return "/src/assets/cadogangardens/";
+      break;
+      case hillviewRoad:
+      return "/src/assets/hillviewroadimg/";
+      break;
+      case stapletonHallRoad:
+      return "/src/assets/stapeltonhallroadimg/";
+      break;
+      default:
+      return "404";
+  }
+}
+
+function fillImageArray(element){
+  let imageFolderPath = getFolderPath(element.parentElement)
+  let imageArray = [];
+  let fileName = "image";
+  let fileExtension = ".jpg";
+
+  let bCheckEnabled = true;
+  let bFinishCheck = false;
+  let img;
+  let i = 1;
+
+  let myInterval = setInterval(loadImage, 1);
+
+  function loadImage() {
+
+    if (bFinishCheck) {
+      clearInterval(myInterval);
+      return;
+    }
+
+    if (bCheckEnabled) {
+
+      bCheckEnabled = false;
+
+      img = new Image();
+      img.onload = fExists;
+      img.onerror = fDoesntExist;
+      img.src = imageFolderPath + fileName + i + fileExtension;
+    }
+
+  }
+
+  function fExists() {
+    imageArray.push(imageFolderPath + fileName + i + fileExtension);
+    i++;
+    bCheckEnabled = true;
+  }
+
+  function fDoesntExist() {
+    bFinishCheck = true;
+  }
+
+return imageArray;
+}
+
+function setupSlideShow(element, imageArray) {
+  if (!imageArray.length) return;
 
   // Find the index of the current image in the array
   let currentIndex = imageArray.findIndex(img => element.src.includes(img));
@@ -264,14 +352,16 @@ function setupBlackAndWhite() {
 
   imgElements.forEach(img => {
     img.classList.add('blackandwhite');
-    img.addEventListener('mouseenter', () => {
-      originalImage = img.src;
-      intervalId = setInterval(() => setupSlideShow(img), 1000);
-    });
-    img.addEventListener('mouseleave', () => {
-      img.src = originalImage;
-      clearInterval(intervalId);
-    });
+
+      let imageArray = fillImageArray(img);
+      img.addEventListener('mouseenter', () => {
+        originalImage = img.src;
+        intervalId = setInterval(() => setupSlideShow(img, imageArray), 1000);
+      });
+      img.addEventListener('mouseleave', () => {
+        img.src = originalImage;
+        clearInterval(intervalId);
+      });
   });
 }
 
@@ -630,9 +720,6 @@ img:not(:hover) {
 .primedForAnimation {
   opacity: 0;
 }
-
-
-
 @media (max-width: 768px) {
 
   @keyframes shrinkAndApplyFilter {
